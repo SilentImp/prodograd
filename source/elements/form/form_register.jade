@@ -1,0 +1,20 @@
+form.form.form_register(action="/user/register", method="post")
+
+  fieldset.form__field
+    label.sell-auth__label(for="form-register__name") Имя
+    input#form-register__name.form__input.form__input_wider(type="text", name="name", placeholder="Иван Мухоморов", required="required")
+
+  fieldset.form__field
+    label.sell-auth__label(for="form-register__email") Электронная почта
+    input#form-register__email.form__input.form__input_wider(type="email", name="email", placeholder="boba@mail.ru", required="required")
+
+  fieldset.form__field
+    label.sell-auth__label(for="form-register__password") Пароль
+    input#form-register__password.form__input.form__input_wider(type="password", name="password", placeholder="", required="required")
+
+  fieldset.form__field
+    label.sell-auth__label(for="form-register__password-confirmation") Повторите пароль
+    input#form-register__password-confirmation.form__input.form__input_wider(type="password", name="password_confirmation", placeholder="", required="required")
+    
+  menu.form__menu
+    button.form__button.form__button_wider(type="submit") Зарегистрироваться

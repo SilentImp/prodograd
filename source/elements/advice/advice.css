@@ -1,0 +1,32 @@
+@import "../../helpers/*";
+
+.advice {
+  background: $white;
+  margin: 0 0 10px;
+  padding: 35px 50px;
+  &__title {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 500;
+    color: $brown-middle;
+    &:before {
+      counter-increment: advices;
+      content: counter(advices) ". ";
+      color: $light;
+      font-weight: 200;
+      }
+    }
+  &__text {
+    font-size: 16px;
+    line-height: 32px;
+    color: color($grey a(80%));
+    a {
+      text-decoration: none;
+      color: $red;
+      &:hover {
+        text-decoration: underline;
+        }
+      }
+    }
+  }

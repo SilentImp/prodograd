@@ -1,0 +1,165 @@
+@import "../../helpers/*"; /**/
+
+.contacts {
+  background: $crayon-light;
+  display: block;
+
+  &__title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 50px;
+
+    &_short {
+      margin: 0;
+      float: left;
+      width: 500px;
+      overflow: hidden;
+      }
+    }
+
+  &__sub-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: $grey;
+    }
+
+  &__wrapper {
+    max-width: 1280px;
+    @mixin clear;
+    margin: auto;
+    padding: 60px 20px 80px;
+    }
+
+  &__links {
+    margin-top: -20px;
+    }
+
+  &__link {
+    @mixin pink_button;
+    padding: 0 30px;
+    margin: 0 20px 20px 0;
+    }
+
+  &__app {
+    margin: 20px 50px 0 0;
+    padding: 0 0 0 65px;
+    display: inline-block;
+    line-height: 50px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $red;
+    font-size: 16px;
+    font-weight: 500;
+    background: 0 100% no-repeat;
+
+    &-list {
+      &_short {
+        overflow: hidden;
+        }
+      }
+
+    &_yandex {
+      background-image: url('../images/yandex.png');
+      }
+
+    &_yandex-navigator {
+      background-image: url('../images/yandex-navigator.png');
+      }
+
+    &_google {
+      background-image: url('../images/google.png');
+      }
+
+    &:hover {
+      text-decoration: underline;
+      }
+    }
+
+  &__instructions {
+    font-size: 16px;
+    line-height: 32px;
+    color: $grey;
+    margin: 0 0 50px;
+    }
+
+  &__details {
+    overflow: hidden;
+    }
+
+  &__information {
+    width: 460px;
+    float: left;
+    @mixin clear;
+    white-space: nowrap;
+    line-height: 36px;
+    font-size: 18px;
+    color: $grey;
+
+    &-title {
+      clear: both;
+      float: left;
+      width: 195px;
+      box-shadow: inset 0 -9px 0 0 $crayon-light, inset 0 -10px 0 0 color($brown a(15%));
+      margin: 0 0 10px;
+      b {
+        display: inline-block;
+        background: $crayon-light;
+        padding: 0 4px 0 0;
+        }
+      }
+
+    &-value  {
+      float: left;
+      width: 205px;
+      font-weight: bold;
+      margin: 0 0 10px;
+
+      a {
+        color: $red;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          }
+        }
+
+      b {
+        display: inline-block;
+        padding: 0 0 0 4px;
+        background: $crayon-light;
+        }
+      }
+    }
+  }
+
+
+@media (max-width: 960px) {
+  .contacts {
+    &__information {
+      float: none;
+      width: auto;
+      margin: 0 0 20px;
+    }
+  } 
+}
+
+
+@media (max-width: 800px) {
+  .contacts {
+    &__app {
+      margin: 20px 0 0;
+      float: left;
+      clear: both;
+      }
+    &__title {
+      &_short {
+        float: none;
+        width: auto;
+        }
+      }
+    }
+  }

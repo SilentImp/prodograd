@@ -1,0 +1,54 @@
+@import "../../helpers/*";
+
+.company {
+  background: $white;
+  float: left;
+  width: 390px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+  height: 160px;
+  overflow: hidden;
+  margin: 0 10px 10px 0;
+  padding: 0 40px 0 200px;
+  position: relative;
+  
+  &:nth-child(2n) {
+    margin: 0 0 10px 0;
+    }
+
+  &__link {
+    color: $grey;
+    text-decoration: none;
+    }
+  &__address {
+    color: color($grey a(60%));
+    font-size: 16px;
+    line-height: 25px;
+    margin: 10px 0 15px;
+    }
+  &__tag {
+    text-decoration: none;
+    background-color: $crayon;
+    display: inline-block;
+    padding: 0 6px;
+    margin: 0 10px 0 0;
+    line-height: 20px;
+    height: 20px;
+    white-space: nowrap;
+    color: $grey;
+    }
+  &__photo {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    }
+  &__title {
+    margin: 20px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: $grey;
+    }
+  }

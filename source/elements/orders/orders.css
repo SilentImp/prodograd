@@ -1,0 +1,152 @@
+@import "../../helpers/*";
+
+.orders {
+
+  &_my {
+    .orders {
+      &__header {
+        border-bottom: 1px solid color($brown a(15%));
+        padding: 0 0 30px;
+        margin: 40px 0 80px;
+        }
+      &__abstract {
+        max-width: none;
+        p {
+          margin: 0;
+          font-size: 18px;
+          line-height: 30px;
+          font-weight: 500;
+          }
+        }
+      }
+    }
+
+  &__updated {
+    margin: 10px 0 0;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 25px;
+    color: $creyon-middle;
+    }
+  
+  &__wrapper {
+    max-width: 1280px;
+    margin: 0 auto 150px;
+    padding: 0 20px; 
+    @mixin clear;
+    }
+
+  &__map {
+    margin: 40px auto;
+    border: 2px solid $crayon-dark;
+    box-sizing: border-box;
+    @mixin clear;
+    
+    &-link {
+      float: left;
+      clear: left;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: $brown-middle;
+      font-weight: 500;
+      border-bottom: 1px dotted $brown-middle;
+      &:hover {
+        border-bottom-color: transparent;
+        }
+      &_selected {
+        color: $red;
+        border-bottom-color: $red;
+        }
+      }
+    
+    &-column {
+      width: 25%;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      padding: 30px 0 10px 27px;
+      }
+    } 
+
+
+  &__abstract {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 780px;
+    color: $brown;
+    font-weight: 500;
+    p {
+      margin: 0 0 30px;
+      }
+    ol {
+      counter-reset: orders_abstract;
+      }
+    li {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 200;
+      color: $brown-middle;
+      
+      &:before {
+        counter-increment: orders_abstract;
+        content: counter(orders_abstract) ". ";
+        font-weight: 500;
+        color: $brown-middle;
+        }
+      }
+    }
+
+  &__header {
+    padding: 0;
+    margin: 40px 0;
+    }
+
+  &__hint {
+    font-size: 16px;
+    line-height: 25px;
+    color: $creyon-middle;
+    }
+
+  &__add {
+    @mixin red_button;
+    width: 330px;
+    float: right;
+    display: block;
+    margin: 0 0 30px;
+    
+    &_main {
+      margin-top: -20px;
+      float: none;
+      }
+    
+    b {
+      display: inline-block;
+      padding: 0 0 0 30px;
+      background: url('../images/add.svg') 0 50% no-repeat;
+      }
+    }
+
+  &__checkout {
+    @mixin red_button;
+    display: block;
+    margin: 0 0 30px;
+    width: 100%;
+    
+    &-wrapper {
+      float: right;
+      width: 330px;
+      }
+    }
+
+  &__title {
+    font-size: 75px;
+    line-height: 100px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 20px;
+    }
+  }

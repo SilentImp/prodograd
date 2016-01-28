@@ -1,0 +1,31 @@
+@import "../../helpers/*"; /**/
+
+.search {
+  max-width: calc(100vw - 40px);
+  width: 1280px;
+  margin: auto;
+  background: $white;
+  @mixin clear;
+  font-size: 0;
+  line-height: 0;
+
+  &__submit {
+    @mixin red_button;
+    width: 180px;
+    float: right;
+    margin: 0;
+    height: 72px;
+    line-height: 72px;
+    }
+
+  &__input {
+    @mixin clear_input;
+    width: calc(100% - 180px);
+    float: left;
+    padding: 0 40px;
+    margin: 6px 0;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    }
+  }

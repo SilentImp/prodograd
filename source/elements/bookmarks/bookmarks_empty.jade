@@ -1,0 +1,13 @@
+section.bookmarks
+  .bookmarks__wrapper
+    header.bookmarks__header
+      h2.bookmarks__title Закладки
+      p.bookmarks__abstract Чтобы пользоваться закладками, 
+        a(href="#") зарегистрируйтесь 
+        | или 
+        a(href="#") войдите 
+        | на сайт!
+      
+    include ../hints/hints_mixin.jade
+    +hints()
+    a.bookmarks__register(href="#") Зарегистрироваться

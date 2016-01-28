@@ -1,0 +1,26 @@
+@import "../../helpers/*";
+
+.dots {
+  clear: both;
+  font-size: 0;
+  text-align: center;
+  margin: -42px 0 70px;
+  &__dot{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+    width: 13px;
+    height: 13px;
+    border: 2px solid $red;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 0 5px;
+    &:hover,
+    &_current {
+      background: $red;
+      }
+    &_current {
+      pointer-events: none;
+      }
+    }
+  }

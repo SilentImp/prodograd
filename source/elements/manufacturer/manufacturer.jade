@@ -1,0 +1,45 @@
+section.manufacturer
+  .manufacturer__wrapper
+    header.manufacturer__header
+      h2.manufacturer__title Усадьба «Петровская»
+      address.manufacturer__address Ленинградская область, Пушкин, Павловское шоссе, 20 км, 5 съезд. 
+        a(href="#") Как проехать?
+    section.manufacturer__body
+      h3.manufacturer__sub-title Производитель о себе
+      time.manufacturer__registred(datetime="2015-06-15") На сайте с 15 июля 2015      
+      
+      include ../sliders/sliders.jade
+      
+      section.manufacturer__details
+        .manufacturer__about
+          p Широко распространился миф, в соответствии с которым Джеймс Кук, прибыв в Австралию и увидев крупное, передвигающееся прыжками, незнакомое ему животное, обратился к одному из аборигенов с вопросом что это, однако тот, не понимая речи Кука, ответил ему на своём родном языке: «не понимаю». Как гласит миф, эту фразу, которая якобы звучит как «кенгуру», Кук и принял за название.
+
+        include ../facts/facts.jade
+                
+        //- dl.manufacturer__facts
+        //-   dt.manufacturer__fact-name: b История
+        //-   dd.manufacturer__fact-value: b с 2007 года
+        //-   dt.manufacturer__fact-name: b Масштаб
+        //-   dd.manufacturer__fact-value: b 200 Га, 55 голов
+        //-   dt.manufacturer__fact-name: b Сотрудники
+        //-   dd.manufacturer__fact-value: b 102 труженика
+        //-   dt.manufacturer__fact-name: b Категории
+        //-   dd.manufacturer__fact-value: b
+        //-     a.manufacturer__category(href="#") Птица и яйцо,
+        //-     | 
+        //-     a.manufacturer__category(href="#") Овощи и фрукты
+        
+        ul.manufacturer__features
+          li.manufacturer__feature.manufacturer__feature_cash 
+            b Оплата
+              br
+              |  наличными
+          li.manufacturer__feature.manufacturer__feature_free-delivery
+            b 
+              | Бесплатная
+              br
+              |  доставка от 10 кг
+          li.manufacturer__feature.manufacturer__feature_delivery
+            b Самовывоз 
+              br
+              |  круглосуточно

@@ -1,0 +1,103 @@
+@import "../../helpers/*";
+
+.steps {
+  @mixin clear;
+  background: $brown-light;
+
+  &__wrapper {
+    padding: 60px 20px 70px;
+    max-width: 1280px;
+    margin: auto;
+    color: $white;
+
+    @mixin clear;
+    }
+
+  &__link {
+    @mixin pink_button;
+    width: 290px;
+    float: right;
+    text-align: left;
+    margin: 0 0 60px;
+    background: url('../images/dislike.svg') 20px 15px no-repeat;
+    }
+
+  &__title {
+    margin: 0 0 60px;
+    font-size: 44px;
+    line-height: 50px;
+    color: $white;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    }
+
+  &__list {
+    clear: both;
+    counter-reset: steps;
+    }
+
+  &__step {
+    float: left;
+    width: 33.33%;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 20px 0 80px;
+    box-sizing: border-box;
+    position: relative;
+    
+    width: calc(50% - 185px);
+    &:last-child {
+      width: 370px;
+      float: right;
+      }
+
+    &:nth-child(1):before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      background: url('../images/one.svg') 0 0 no-repeat;
+      }
+    &:nth-child(2):before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      background: url('../images/two.svg') 0 0 no-repeat;
+      }
+    &:nth-child(3):before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      top: 4px;
+      background: url('../images/three.svg') 0 0 no-repeat;
+      }
+    &:before {
+      counter-increment: steps;
+      content: counter(steps);
+      position: absolute;
+      line-height: 64px;
+      font-size: 60px;
+      font-weight: 200;
+      top: -4px;
+      left: 0;
+      color: $yellow;
+      }
+    p {
+      max-width: 260px;
+      }
+    }
+  }
+
+
+@media (max-width: 800px) {
+ .steps {
+   &__step:last-child,
+   &__step {
+     float: none;
+     width: auto;
+     margin: 0 0 20px;
+   }
+  }
+}

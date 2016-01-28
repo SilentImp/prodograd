@@ -1,0 +1,59 @@
+@import "../../helpers/*";
+
+.hints {
+  float: right;
+  width: 330px;
+  
+  &_bookmarks {
+    margin-top: 44px;
+    }
+
+  &_orders {
+    margin-top: 37px;
+    }
+
+  &_sell-auth {
+    margin-top: 20px;
+    }
+
+  &_my-orders {
+    margin-top: -3px;
+    }
+
+  &__contact-us {
+    @mixin pink_button;
+    width: 100%;
+    padding: 0;
+    margin: 30px 0 0;
+
+    b {
+      padding: 0 25px 0 56px;
+      display: inline-block;
+      background: url('../images/dislike.svg') 15px 15px no-repeat;
+      }
+    }
+
+  &__title {
+    line-height: 70px;
+    font-size: 24px;
+    margin: 0 0 15px;
+    font-weight: bold;
+    color: $brown-middle;
+    }
+
+  &__hint {
+    padding: 29px 37px;
+    margin: 0 0 5px;
+    background: $brown-light;
+    color: color($white a(85%));
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 30px;
+    }
+  }
+
+@media (max-width: 1270px) {
+  .hints {
+    display: none;
+    }
+  }

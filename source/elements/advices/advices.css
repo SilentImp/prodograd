@@ -1,0 +1,92 @@
+@import "../../helpers/*"; /**/
+
+.advices {
+  text-align: center;
+  background: $white;
+  padding: 80px 0 100px;
+
+  &__title {
+    @mixin title;
+    background-image: url('../images/advice__icon.svg');
+    margin: 0 0 70px 60px;
+    }
+
+  &__sub-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', sans-serif;
+    margin: -3px 0 15px;
+    color: $brown-middle;
+    }
+
+  &__abstract {
+    color: $grey;
+    font-size: 16px;
+    line-height: 32px;
+    }
+
+  &__tag {
+    @mixin tag;
+    }
+
+  &__advice {
+    min-height: 253px;
+    max-width: 550px;
+    padding: 22px 20px 0 360px;
+    margin: 0 auto 40px;
+    text-align: left;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 5px;
+      width: 270px;
+      height: 270px;
+      background: 50% 50% no-repeat;
+      background-size: 270px 270px;
+      }
+
+    &_price:before {
+      background-image: url('../images/advice__quality.png');
+      }
+
+    &_quality:before {
+      background-image: url('../images/advice__count.png');
+      }
+
+    &_count:before {
+      background-image: url('../images/advice__price.png');
+      }
+
+    &_delivery:before {
+      background-image: url('../images/advice__delivery.png');
+      }
+    }
+
+  &__buy {
+    @mixin red_button;
+    margin: -40px 290px 0 340px;
+    width: 260px;
+    display: inline-block;
+    }
+  }
+
+
+@media (max-width: 750px) {
+  .advices {
+    &__buy {
+      margin: auto;
+    }
+    &__advice {
+      padding: 22px 20px 0;
+      margin: 0;
+      max-width: none;
+      &:before {
+        display: none;
+      }
+    } 
+  }
+}

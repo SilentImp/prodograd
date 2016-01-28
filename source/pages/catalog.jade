@@ -1,0 +1,15 @@
+extends ../elements/layout/layout.jade
+
+block title
+  title Каталог | Ярмонка
+
+block content
+  include ../elements/header/header-catalog.jade
+  include ../elements/filters/filters.jade
+  .double
+    include ../elements/purchases/purchases-catalog.jade
+    include ../elements/stores/stores-map.jade
+  include ../elements/farmer/farmer.jade
+  
+block prescripts
+  script(src="https://maps.googleapis.com/maps/api/js")

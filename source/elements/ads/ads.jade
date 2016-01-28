@@ -1,0 +1,142 @@
+section.ads
+  .ads__wrapper
+    header.ads__header
+      h2.ads__title Мои объявления
+      p.ads__abstract Вы опубликовали 22 объявления в 2 категориях. Обновляйте, удаляйте или скрывайте лишнее.
+      
+    include ../hints/hints.jade
+    
+    .ads__list
+    
+      menu.ads__filter
+        button.ads__button.ads__button_current(type="button", data-type="all"): b Все
+        button.ads__button(type="button", data-type="active"): b Активные
+        button.ads__button(type="button", data-type="hidden"): b Скрытые
+
+      .ads__category
+        
+        h3.ads__sub-title Молочные продукты
+        table.ads__table
+          thead
+            tr
+              th
+              th Название
+              th Цена
+              th Опубликовано
+              th Просмотрено
+              th 
+          tbody
+            tr.ads__item.ads__item_active
+              td
+                img(src="images/mads1.jpg", alt="Фотография")
+              td: p Козье молоко от усадьбы «Петровской» Каждый день вкусное Козье молоко от усадьбы «Петровской» Каждый день вкусное Козье молоко от усадьбы «Петровской» Каждый день вкусное
+              td 
+                b 1000
+                span.rub ₽
+              td
+                time(datetime="2015-06-15") 15 июля 2015
+              td 235 930
+              td
+                a.ads__control.ads__control_edit(href="#")
+                a.ads__control.ads__control_view(href="#")
+                button.ads__control.ads__control_remove(type="button")
+            tr.ads__item.ads__item_active
+              td
+                img(src="images/mads2.jpg", alt="Фотография")
+              td Лучшие яблоки на свете
+              td 
+                b 260
+                span.rub ₽
+              td
+                time(datetime="2015-06-14") 14 июля 2015
+              td 231 932
+              td
+                a.ads__control.ads__control_edit(href="#")
+                a.ads__control.ads__control_view(href="#")
+                button.ads__control.ads__control_remove(type="button")
+            tr.ads__item.ads__item_active
+              td
+                img(src="images/mads3.jpg", alt="Фотография")
+              td Свинина деревенская готовая для употребления
+              td 
+                b 1350
+                span.rub ₽
+              td
+                time(datetime="2015-06-07") 7 июля 2015
+              td 201 049
+              td
+                a.ads__control.ads__control_edit(href="#")
+                a.ads__control.ads__control_view(href="#")
+                button.ads__control.ads__control_remove(type="button")
+              
+      .ads__category
+        
+        h3.ads__sub-title Овощи и фрукты
+        table.ads__table
+          thead
+            tr
+              th
+              th Название
+              th Цена
+              th Опубликовано
+              th Просмотрено
+              th 
+          tbody
+            tr.ads__item.ads__item_active
+              td
+                img(src="images/mads4.jpg", alt="Фотография")
+              td Идеальный кефир
+              td 
+                b 200
+                span.rub ₽
+              td
+                time(datetime="2015-06-10") 10 июля 2015
+              td 492
+              td
+                a.ads__control.ads__control_edit(href="#")
+                a.ads__control.ads__control_view(href="#")
+                button.ads__control.ads__control_remove(type="button")
+            tr.ads__item.ads__item_hidden.ads__item_moderation
+              td
+                img(src="images/mads5.jpg", alt="Фотография")
+              td Лучшие яблоки на свете
+              td 
+                b 150
+                span.rub ₽
+              td(colspan="3") Объявление на модерации
+            tr.ads__item.ads__item_hidden.ads__item_moderation
+              td
+                img(src="images/mads1.jpg", alt="Фотография")
+              td Свинина деревенская готовая для употребления
+              td 
+                b 1050
+                span.rub ₽
+              td(colspan="3") Объявление на модерации
+              
+      .ads__category
+        
+        h3.ads__sub-title Птица и яйцо
+        table.ads__table
+          thead
+            tr
+              th
+              th Название
+              th Цена
+              th Опубликовано
+              th Просмотрено
+              th 
+          tbody
+            tr.ads__item.ads__item_active
+              td
+                img(src="images/mads2.jpg", alt="Фотография")
+              td Идеальный кефир
+              td 
+                b 200
+                span.rub ₽
+              td
+                time(datetime="2015-06-10") 10 июля 2015
+              td 492
+              td
+                a.ads__control.ads__control_edit(href="#")
+                a.ads__control.ads__control_view(href="#")
+                button.ads__control.ads__control_remove(type="button")

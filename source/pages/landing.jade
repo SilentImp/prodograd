@@ -1,0 +1,14 @@
+extends ../elements/layout/layout.jade
+
+block title
+  title Главная | Ярмонка
+
+block content
+  include ../elements/header/header_landing.jade
+  include ../elements/prices/prices.jade
+  include ../elements/purchases/purchases.jade  
+  include ../elements/advices/advices.jade
+  include ../elements/stores/stores.jade
+
+block scripts
+  script(src="//maps.googleapis.com/maps/api/js")

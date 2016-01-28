@@ -1,0 +1,94 @@
+@import "../../helpers/*";
+
+.order-create {
+  max-width: 890px;
+  @mixin clear;
+  
+  @mixin radiosetup;
+  
+  &__publish {
+    @mixin red_button;
+    margin: 0 40px 0 0;
+    }
+
+  &__reset {
+    @mixin clear_button;
+    font-size: 16px;
+    line-height: 18px;
+    color: $brown;
+    border-bottom: 1px dotted $brown;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover {
+      border-bottom-color: transparent;
+      }
+    }
+  
+  &__title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 20px; 
+    }
+  
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    color: $brown;
+    margin: 0 0 10px;
+    }
+  
+  &__field {
+    @mixin clear;  
+    margin: 0 0 30px;
+    
+    &-group {
+      .order-create__field{
+        float: left;
+        }
+      }
+    }
+
+  &__hint {
+    color: $creyon-middle;
+    font-size: 16px;
+    line-height: 25px;
+    p {
+      margin: 0 0 25px;
+      }
+    }
+
+  &__input {
+    @mixin textinput;
+    width: 250px;
+    float: left;
+    margin: 0 30px 0 0;
+    &_short {
+      width: 180px;
+      }
+    &_wide {
+      width: 530px;
+      }
+    }
+
+  .select2 {
+    float: left;
+    margin: 0 30px 0 0;
+    }
+
+  &__select {
+    float: left;
+    width: 250px;
+    margin: 0 30px 0 0;
+    }
+
+  &__textarea {
+    @mixin textarea;
+    width: 530px;
+    margin: 0 30px 0 0;
+    float: left;
+    }
+  }

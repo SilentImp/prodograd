@@ -1,0 +1,117 @@
+@import "../../helpers/*";
+
+.profile {
+  margin: 42px 0 90px;
+  @mixin clear;
+  
+  .tab {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    &_current {
+      left: auto;
+      top: auto;
+      height: auto;
+      width: auto;
+      overflow: visible;
+      position: static;
+      }
+    }
+
+  &__tab-button {
+    @mixin clear_button;
+    padding: 0 27px;
+    font-size: 24px;
+    line-height: 66px;
+    vertical-align: top;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    cursor: pointer;
+    b {
+      line-height: 26px;
+      border-bottom: 1px dotted color($brown-middle a(15%));
+      }
+    &:hover,
+    &_current {
+      background: $white;
+      display: inline-block;
+      color: $red;
+      b {
+        border-bottom-style: none;
+        }
+      }
+    }
+
+  &__tab-menu {
+    background: $crayon-dark;
+    border: 3px solid $crayon-dark;
+    display: inline-block;
+    height: 66px;
+    line-height: 66px;
+    font-size: 0;
+    margin: 15px 0 62px;
+    }
+
+  
+  &__wrapper {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: auto;
+    }
+
+  &__header {
+    border-bottom: 1px solid color($brown a(15%));
+    padding: 0 0 27px;
+    margin: 0 0 80px;
+    }
+
+  &__title {
+    font-size: 75px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 20px;
+    }
+
+  &__sub-title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 20px;
+    }
+
+  &__delete {
+    float: right;
+    font-size: 16px;
+    line-height: 18px;
+    color: $grey;
+    text-decoration: none;
+    border-bottom: 1px dotted $grey;
+    &:hover {
+      border-style: none;
+      }
+    }
+
+  &__abstract {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: $brown;
+
+    a {
+      color: $red;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        }
+      }
+    }
+  }

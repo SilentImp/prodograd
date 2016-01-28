@@ -1,0 +1,89 @@
+@import "../../helpers/*";
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1001;
+  width: 480px;
+  padding: 54px 40px 70px;
+  background: $crayon;
+  text-align: center;
+  display: none;
+  
+  &_unfixed {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    margin: 0 0 20px;
+    }
+  
+
+  &__title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 40px;
+    }
+  
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    margin: 0 0 40px;
+    a {
+      color: $red;
+      text-decoration: none;
+      &.tel {
+        white-space: nowrap;
+        }
+      &:hover {
+        text-decoration: underline;
+        }
+      }
+    }
+  
+  &__menu {
+    margin: 50px 0 0;
+    }
+  
+  &__accept,
+  &__reject {
+    @mixin red_button;
+    padding: 0 50px;
+    margin: 0 15px;
+    }
+
+  &__close {
+    @mixin red_button;
+    padding: 0 50px;
+    &_cross {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      padding: 0;
+      margin: 0;
+      top: 0;
+      right: 0;
+      background: url("../images/cross.svg") 50% 50% no-repeat;
+      &:hover {
+        background: url("../images/cross.svg") 50% 50% no-repeat;
+        }
+      }
+    }
+  
+  &-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: color($brown a(90%));
+    z-index: 1000;
+    }
+  }

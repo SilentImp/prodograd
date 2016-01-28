@@ -1,0 +1,149 @@
+@import "../../helpers/*";
+
+.order-edit {
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 10px;
+  padding: 0 30px 32px;
+
+  @mixin radiosetup;
+  
+  .order-edit__radio-input:checked + label:before,
+  .order-edit__radio-label:before,
+  .order-edit__radio-label:hover:before {
+    background: $crayon-light;
+    }
+  
+  &__save {
+    @mixin red_button;
+    margin: 0 40px 0 0;
+    }
+
+  &__reset {
+    @mixin clear_button;
+    font-size: 16px;
+    line-height: 18px;
+    color: $brown;
+    border-bottom: 1px dotted $brown;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 40px 0 0;
+    &:hover {
+      border-bottom-color: transparent;
+      }
+    }
+
+  &__delete {
+    text-decoration: none;
+    @mixin clear_button;
+    font-size: 16px;
+    line-height: 18px;
+    color: $creyon-middle;
+    border-bottom: 1px dotted $creyon-middle;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 40px 0 0;
+    &:hover {
+      border-bottom-color: transparent;
+      }
+    }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    color: $brown;
+    margin: 0 0 10px;
+    }
+  
+  &__field {
+    @mixin clear;  
+    margin: 0 0 30px;
+    height: auto;
+    overflow: visible;
+    
+    &_fixed {
+      height: 96px;
+      }
+    
+    &-group {
+      .order-edit__field{
+        float: left;
+        }
+      }
+    }
+
+  &__hint {
+    color: $creyon-middle;
+    font-size: 16px;
+    line-height: 25px;
+    p {
+      margin: 0 0 25px;
+      }
+    }
+
+  &__input {
+    @mixin textinput;
+    width: 250px;
+    float: left;
+    margin: 0 30px 0 0;
+    background-color: $crayon-light;
+    &_short {
+      width: 180px;
+      }
+    &_wide {
+      width: 530px;
+      }
+    }
+
+  .select2 {
+    float: left;
+    margin: 0 30px 0 0;
+    }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    background-color: $crayon-light;
+    }
+
+  &__select {
+    float: left;
+    width: 250px;
+    margin: 0 30px 0 0;
+    }
+
+  &__textarea {
+    @mixin textarea;
+    width: 530px;
+    margin: 0 30px 0 0;
+    float: left;
+    background-color: $crayon-light;
+    }
+  
+  &__header {
+    line-height: 85px;
+    border-bottom: 1px solid $white-darker;
+    @mixin clear;
+    }
+
+  &__title {
+    white-space: nowrap;
+    color: $grey;
+    font-size: 20px;
+    font-weight: 500;
+    float: left;
+    }
+
+  &__cancel {
+    padding: 32px 0 0;
+    float: right;
+    color: $red;
+    text-decoration: none;
+    border-bottom: 1px dotted $red;
+    font-size: 16px;
+    line-height: 18px;
+    &:hover {
+      border-bottom-color: transparent;
+      }
+    }
+  }

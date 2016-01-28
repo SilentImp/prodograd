@@ -1,0 +1,34 @@
+@import "../../helpers/*";
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 36px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+
+  &__link {
+    color: color($red a(85%));
+    text-decoration: none;
+    position: relative;
+    margin: 0 33px 0 0;
+    &:hover {
+      text-decoration: underline;
+      }
+    &:after {
+      position: absolute;
+      left: 100%;
+      width: 33px;
+      height: 36px;
+      vertical-align: middle;
+      content: "";
+      background: url('../images/breadcrumb_arrow.svg') 50% 54% no-repeat;
+      display: inline-block;
+      pointer-events: none;
+      z-index: -1;
+      }
+    }
+  &__current {
+    color: color($grey-middle a(80%));
+    }
+  }

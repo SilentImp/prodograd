@@ -1,0 +1,16 @@
+extends ../elements/layout/layout.jade
+
+block title
+  title Карточка товара | Ярмонка
+
+block content
+  include ../elements/header/header.jade
+  include ../elements/edit-message/edit-item-message.jade
+  include ../elements/itemview/itemview.jade
+  include ../elements/steps/steps.jade
+  include ../elements/contacts/contacts_item.jade
+  include ../elements/stores/store.jade
+  include ../elements/purchases/purchases_item.jade
+
+block scripts
+  script(src="//maps.googleapis.com/maps/api/js")

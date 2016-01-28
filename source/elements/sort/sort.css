@@ -1,0 +1,98 @@
+@import "../../helpers/*";
+
+.sort {
+  margin: 0;
+  line-height: 43px;
+  white-space: nowrap;
+  font-size: 0;
+  display: block;
+  
+  &_right {
+    float: right;
+    margin: 54px 10px 30px 0;
+    }
+
+  &__title {
+    font-size: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    color: color($grey-middle a(85%));
+    }
+
+  &__menu {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 30px;
+    }
+
+  &__icon {
+    display: none;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    fill: $brown-middle;
+    transition: fill .25s;
+    }
+
+  &__button {
+    @mixin clear_button;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 20px;
+    border: 1px solid $brown-dark;
+    font-size: 16px;
+    font-weight: bold;
+    background: $brown-dark;
+    box-shadow: 0 0 0 1px $brown-dark;
+    color: $crayon;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+
+    &_forward {
+      .sort__icon{
+        &_forward {
+          display: inline-block;
+          }
+        &_backward {
+          display: none;
+          }
+        }
+      }
+
+    &_backward {
+      .sort__icon{
+        &_forward {
+          display: none;
+          }
+        &_backward {
+          display: inline-block;
+          }
+        }
+    }
+
+    &_current {
+      background: none;
+      color: $brown-middle;
+      padding-right: 0;
+
+      &:hover {
+        .sort__icon {
+          fill: $crayon;
+          }
+        }
+      }
+    &:hover {
+      background: $brown-dark;
+      color: $crayon;
+      }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+      }
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+      }
+    &+.sort__button {
+      border-left-style: none;
+      }
+    }
+  }

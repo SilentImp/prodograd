@@ -1,0 +1,278 @@
+@import "../../helpers/*";
+
+.form {
+  @mixin clear;
+
+  @mixin radiosetup;
+  
+  &_dislike,
+  &_like {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    .form {
+      &__menu {
+        margin: 0;
+        }
+      }
+    }
+
+  &_register,
+  &_recovery {
+    width: 360px;
+    margin: auto;
+    text-align: left;
+    .form {
+      &__menu {
+        margin: 0;
+        }
+      }
+    }
+  
+  &__menu {
+    margin: 0 0 60px;
+    }
+  
+  &__geolocation-box {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    }
+  
+  &__map {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: $red;
+    &-wrapper {
+      width: 530px;
+      height: 360px;
+      float: left;
+      margin: 0 30px 0 0;
+      }
+    }
+  
+  &__button,
+  &__publish {
+    @mixin red_button;
+    margin: 0 40px 0 0;
+    &_wide {
+      width: 235px;
+      }
+    &_wider {
+      width: 100%;
+      }
+    }
+
+  &__link,
+  &__back {
+    @mixin clear_button;
+    font-size: 16px;
+    line-height: 18px;
+    color: $brown;
+    border-bottom: 1px dotted $brown;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover {
+      border-bottom-color: transparent;
+      }
+    }
+
+  &__back_icon {
+    position: relative;
+    margin: 0 0 0 35px;
+    &:before{
+      content: "";
+      display: block;
+      height: 20px;
+      width: 35px;
+      position: absolute;
+      left: -35px;
+      top: 50%;
+      margin-top: -10px;
+      background: url('../images/back.svg') 0 50% no-repeat;
+      }
+    }
+  
+  &__title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 0 0 20px; 
+    }
+  
+  &__sub-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    margin: 40px 0 30px;
+    }
+
+  &__field-set + .form__field-set {
+    margin-top: -15px;
+    }
+
+  &__photo {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px 30px 0;
+    
+    &:hover {
+      .form {
+        &__photo-remove {
+          opacity: .4;
+          &:hover {
+            opacity: 1;
+            }
+          }
+        }
+      }
+    
+    &-remove {
+      @mixin clear_button;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      display: block;
+      background: $brown url('../images/remove-photo.svg') 50% 50% no-repeat;
+      opacity: 0;
+      transition: opacity .25s;
+      }
+    }
+
+  &__photos {
+    max-width: 910px;
+    }
+
+  &__photos-add {
+    @mixin clear_button;
+    border-radius: 5px;
+    border: 2px solid $red;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    background: url('../images/photo.svg') 50% 50px no-repeat;
+    line-height: 20px;
+    padding: 40px 0 0;
+    margin: 0 30px 30px 0;
+    cursor: pointer;
+    b{
+      font-size: 16px;
+      font-weight: bold;
+      color: $red;
+      }
+    }
+  
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    color: $brown;
+    margin: 0 0 10px;
+    }
+  
+  &__field {
+    @mixin clear;  
+    margin: 0 0 30px;
+    
+    &_fixed {
+      height: 95px;
+      visibility: visible;
+      }
+    
+    &-group {
+      &_four {
+        .form__hint {
+          max-width: 170px;
+          }
+        }
+      .form__field{
+        float: left;
+        }
+      }
+    }
+
+  &__hint {
+    max-width: 320px;
+    display: inline-block;
+    color: $creyon-middle;
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+    p {
+      display: inline-block;
+      line-height: 25px;
+      vertical-align: middle;
+      &+p{
+        margin-top: 25px;
+        }
+      }
+    }
+
+  &__abstract {
+    font-size: 18px;
+    line-height: 25px;
+    color: $brown-light;
+    a {
+      color: $red;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        }
+      }
+    }
+
+  &__input {
+    @mixin textinput;
+    width: 250px;
+    float: left;
+    margin: 0 30px 0 0;
+    &_invalid {
+      box-shadow: inset 0 0 0 1px $red;
+      }
+    &_short {
+      width: 180px;
+      }
+    &_middle {
+      width: 365px;
+      }
+    &_wide {
+      width: 530px;
+      }
+    &_wider {
+      width: 100%;
+      }
+    }
+
+  .select2 {
+    float: left;
+    margin: 0 30px 0 0;
+    }
+
+  &__select {
+    float: left;
+    width: 250px;
+    margin: 0 30px 0 0;
+    }
+
+  &__textarea {
+    @mixin textarea;
+    width: 530px;
+    margin: 0 30px 0 0;
+    float: left;
+    &_wide {
+      width: 100%;
+      float: none;
+      }
+    }
+  }

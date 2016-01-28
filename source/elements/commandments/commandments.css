@@ -1,0 +1,80 @@
+@import "../../helpers/*";
+
+.commandments {
+  padding: 0 20px;
+  position: relative;
+  z-index: 3;
+
+  &__wrapper {
+    max-width: 1240px;
+    padding: 60px 20px 10px;
+    background: $white;
+    position: relative;
+    margin: 0 auto -100px;
+    top: -100px;
+    }
+
+  &__sub-title {
+    font-size: 24px;
+    line-height: 36px;
+    color: $brown;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 0 15px;
+    }
+
+  &__text {
+    font-size: 16px;
+    line-height: 32px;
+    color: color($grey a(80%));
+    }
+
+  &__list {
+    max-width: 840px;
+    margin: auto;
+    }
+
+  &__commandment {
+    padding: 0 0 0 260px;
+    margin: 0 0 70px;
+    min-height: 200px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -7px;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 200px 200px;
+      }
+    &:nth-child(1):before {
+      background-image: url('../images/c1.png');
+      }
+    &:nth-child(2):before {
+      background-image: url('../images/c2.png');
+      }
+    &:nth-child(3):before {
+      background-image: url('../images/c3.png');
+      }
+    }
+
+  &__abstract {
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 200;
+    max-width: 940px;
+    text-align: center;
+    margin: 0 auto 50px;
+    }
+
+  &__title {
+    @mixin title;
+    background-image: url('../images/prices__icon.svg');
+    background-position: 50% -4px;
+    margin: 0 0 55px;
+    }
+  }

@@ -1,0 +1,187 @@
+@import "../../helpers/*";
+
+.itemview {
+  background: $white;
+
+  &__wrapper {
+    max-width: 1280px;
+    padding: 46px 20px 50px;
+    margin: auto;
+    @mixin clear;
+    }
+
+  &__show {
+    @mixin red_button;
+    margin-top: -70px;
+    }
+
+  &__brief {
+    width: 370px;
+    float: right;
+    background: $crayon;
+    }
+
+  &__actions {
+    padding: 40px;
+    border-top: 1px solid color($brown a(10%));
+    text-align: center;
+    }
+
+  &__features {
+    margin: 32px 40px 25px;
+    }
+
+  &__prices {
+    padding: 19px 40px 0;
+    }
+
+  &__discount {
+    font-size: 16px;
+    line-height: 24px;
+    color: color($grey a(80%));
+    font-family: 'Roboto Light';
+    .rub{
+      font-size: 20px;
+      font-weight: normal;
+      }
+    b {
+      font-size: 20px;
+      line-height: 34px;
+      }
+    }
+
+  &__price {
+    margin: 0 0 3px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 200;
+    color: $brown-middle;
+    font-family: 'Roboto Light';
+    .rub{
+      font-size: 30px;
+      font-weight: normal;
+      }
+    b {
+      font-size: 48px;
+      line-height: 60px;
+      font-weight: bold;
+      font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+      color: $brown-middle;
+      }
+    }
+
+  &__feature {
+    color: $grey;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 9px 0 9px 53px;
+    margin: 0 0 15px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+
+    &_anytime {
+      background-image: url('../images/time.svg');
+      background-size: 37px auto;
+      }
+
+    &_delivery {
+      background-image: url('../images/icons-profile-delivery.svg');
+      background-size: 37px auto;
+      }
+
+    &_cash {
+      background-image: url('../images/icons-profile-cash.svg');
+      background-size: 37px auto;
+      }
+    }
+
+  &__bookmark {
+    @mixin pink_button;
+    background: url('../images/hart.svg') 23px -1px no-repeat;
+    width: 100%;
+    }
+
+  &__social {
+    clear: right;
+    float: right;
+    text-align: center;
+    white-space: nowrap;
+    width: 370px;
+    margin: 36px 0;
+    font-size: 0;
+    white-space: nowrap;
+    &-icon {
+      width: 36px;
+      height: 36px;
+      margin: 0 15px 0 0;
+      vertical-align: middle;
+      }
+    &-button {
+      @mixin clear_button;
+      cursor: pointer;
+      fill: $yellow;
+      transition: fill .25s;
+      &:hover {
+        fill: $red;
+        }
+      }
+    }
+
+  &__sub-title {
+    line-height: 40px;
+    font-size: 16px;
+    color: color($grey-middle a(80%));
+    display: inline-block;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+    }
+
+  &__title {
+    font-size: 74px;
+    line-height: 70px;
+    color: $brown-middle;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    margin: 25px 0 90px;
+    }
+
+  &__details {
+    padding: 0 40px;
+    overflow: hidden;
+    }
+
+  &__time {
+    color: color($grey-middle a(80%));
+    font-size: 16px;
+    line-height: 32px;
+    margin: -10px 0 14px;
+    display: inline-block;
+    }
+
+  &__abstract {
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0 0 32px;
+    color: $grey;
+    }
+  }
+
+
+@media (max-width: 1270px) {
+ .itemview {
+   &__details {
+     clear: both;
+     padding: 0;
+   }
+  }
+}
+
+@media (max-width: 799px) {
+  .itemview {
+    &__brief {
+      float: none;
+      width: auto;
+    }
+  }
+}

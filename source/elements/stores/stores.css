@@ -1,0 +1,161 @@
+@import "../../helpers/*";
+
+.mapup {
+  background: $white;
+  max-width: 350px;
+  margin-left: -175px;
+  height: auto;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 30px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: -18px 0 0 -20px;
+    width: 40px;
+    height: 20px;
+    background: url('../images/marker.svg') 50% 0 no-repeat;
+    background-size: 40px 53px;
+    }
+  &__close {
+    @mixin clear_button;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url('../images/close.svg') 50% 50% no-repeat;
+    }
+  }
+
+.stores {
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    }
+
+  &_aside {
+    .stores {
+      &__inner {
+        max-height: 100vh;
+        z-index: 500;
+        &_fixed {
+          position: fixed;
+          top: 0;
+          left: 50%;
+          left: calc(50% + 270px);
+          right: 0;
+          width: auto;
+          height: 100%;
+          &_bottom {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            }
+          }
+        }
+      &__wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        left: calc(50% + 270px);
+        right: 0;
+        margin: 0;
+        height: auto;
+        }
+      }
+    }
+
+  &__title {
+    @mixin title;
+    background-image: url('../images/stores__icon.png');
+    background-size: 115px 135px;
+    margin: 60px 0 25px;
+    height: 135px;
+    padding: 40px 20px 0;
+    }
+
+  &__abstract {
+    color: $grey;
+    margin: 0 auto 75px;
+    max-width: 720px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 200;
+    }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    display: block;
+    }
+
+  &__wrapper {
+    height: 630px;
+    display: block;
+    }
+  }
+
+
+@media (max-width: 1500px) and (min-width: 1300px) {
+  .stores {
+    &_aside {
+      .stores {
+        &__inner {
+          max-height: 100vh;
+          &_fixed {
+            position: fixed;
+            top: 0;
+            left: 980px;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: 100%;
+            &_bottom {
+              top: auto;
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              }
+            }
+          }
+        &__wrapper {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 980px;
+          right: 0;
+          margin: 0;
+          height: auto;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width: 1300px) {
+  .stores {
+    &_aside {
+      .stores {
+        &__wrapper {
+          position: static;
+          top: auto;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          margin: 0;
+          height: 630px;
+          }
+        }
+      }
+    }
+  }

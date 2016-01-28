@@ -1,0 +1,72 @@
+form.filters(action="/filter/", method="post")
+  fieldset.filters__wrapper
+  
+    section.filters__filter
+      label.filters__label(for="filter-1") Подкатегория:
+      select.filters__select#filter-1(placeholder="Все продукты")
+        option Молоко
+        option Мясо
+        option Сыр
+        option Бананчик
+      
+    section.filters__filter
+      label.filters__label(for="filter-2") Подкатегория:
+      select.filters__select#filter-2(placeholder="Все молоко")
+        option Сгущеное молоко
+        option Соевое молоко
+        option Пряженое молоко
+
+    a.filters__more(href="#") Ещё фильтры
+    a.filters__less(href="#") Скрыть фильтры
+  
+  fieldset.filters__additional
+    h3.filters__sub-title Дополнительные фильтры
+    
+    .filters__line
+      section.filters__filter
+        label.filters__label(for="filter-3") Жирность:
+        select.filters__select.filters__select_short#filter-3(placeholder="Любая")
+          option 5%
+          option 10%
+          option 15%
+          option 20%
+          option 25%
+          
+      section.filters__filter
+        label.filters__label(for="filter-4") Объём, литры:
+        select.filters__select.filters__select_short#filter-4(placeholder="Любая")
+          option 0.5 л.
+          option 0.75 л.
+          option 1 л.
+          option 1.5 л.
+          option 2 л.
+          
+      section.filters__filter
+        label.filters__label(for="filter-5") Тара:
+        select.filters__select.filters__select_short#filter-5(placeholder="Любая")
+          option Бутылка
+          option Пакетик
+          option Бидончик
+          
+      section.filters__filter
+        label.filters__label(for="filter-6") Ферма:
+        select.filters__select.filters__select_short#filter-6(placeholder="Любая")
+          option Звероферма
+          option Птицеферма
+          option Колхоз Большевик
+          
+    .filters__line
+      section.filters__filter
+        input.filters__checkbox#filter-7(type="checkbox")
+        label.filters__label.filters__label_checkbox(for="filter-7") Безлактозное
+      
+      section.filters__filter
+        input.filters__checkbox#filter-8(type="checkbox")
+        label.filters__label.filters__label_checkbox(for="filter-8") Пастеризованное
+        
+      section.filters__filter
+        input.filters__checkbox#filter-9(type="checkbox")
+        label.filters__label.filters__label_checkbox(for="filter-9") Подходит вегетерианцам
+      
+      
+    button.filters__reset(type="reset") Сбросить фильтры

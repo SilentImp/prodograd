@@ -1,0 +1,22 @@
+@import "../../helpers/*";
+
+.edit-message {
+  text-align: center;
+  padding: 12px 20px;
+  background: $crayon-light;
+  text-align: center;
+  color: $brown;
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 500;
+  b {
+    color: $yellow;
+    }
+  a {
+    color: $red;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      }
+    }
+  }

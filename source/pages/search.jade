@@ -1,0 +1,11 @@
+extends ../elements/layout/layout.jade
+
+block title
+  title Результаты поиска | Ярмонка
+
+block content
+  include ../elements/header/header.jade
+  include ../elements/results/results.jade
+
+block scripts
+  script(src="//maps.googleapis.com/maps/api/js")

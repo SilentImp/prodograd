@@ -1,0 +1,70 @@
+@import "../../helpers/*";
+
+.order {
+  margin: 40px 0 60px;
+  max-width: 890px;
+	&__header {
+    line-height: 60px;
+    overflow: hidden;
+    position: relative;
+    @mixin clear;
+    margin: 0 0 20px;
+    }
+  &__number {
+    width: 33.33%;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    
+    font-size: 44px;
+    font-weight: bold;
+    font-family: 'Geometria Bold', Helvetica, Arial, sans-serif;
+    color: $brown;
+    }
+  &__placed {
+    width: 33.33%;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    
+    font-size: 16px;
+    color: color($grey a(60%));
+    }
+  &__show {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    @mixin clear_button;
+    
+    font-size: 16px;
+    line-height: 18px;
+    color: $brown;
+    border-bottom: 1px dotted $brown;
+    
+    cursor: pointer;
+    
+    &:hover {
+      border-bottom-color: transparent;
+      }
+
+    &_current {
+      color: $red;
+      border-bottom-color: $red;
+      }
+    }
+  }
+
+@media (max-width: 1270px) {
+  .order {
+   max-width: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .order {
+    &-item__preference{
+      width: auto;
+      float: none;
+    }
+  }
+}

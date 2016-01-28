@@ -1,0 +1,97 @@
+form.form.form_items(action="/forms/save", method="post")
+  h2.form__title Шаг 2. О товаре
+
+  .form__field-set
+
+    h3.form__sub-title Место товара в каталоге
+
+    fieldset.form__field-group
+      
+      fieldset.form__field
+        label.form__label(for="form__category") Категория
+        select#form__category.form__select(name="category", placeholder="Выбрать", required="required")
+          option Центнер
+          option Килограмм
+          option Грамм
+          option Миллиграмм
+      
+      fieldset.form__field
+        label.form__label(for="form__sub-category") Подкатегория
+        select#form__sub-category.form__select(name="subcategory", placeholder="Выбрать", required="required")
+          option Центнер
+          option Килограмм
+          option Грамм
+          option Миллиграмм
+      
+      fieldset.form__field
+        label.form__label(for="form__view") Вид
+        select#form__view.form__select(name="view", placeholder="Выбрать", required="required")
+          option Центнер
+          option Килограмм
+          option Грамм
+          option Миллиграмм
+
+  .form__field-set
+
+    h3.form__sub-title Информация о товаре
+
+    fieldset.form__field.form__field_fixed
+      label.form__label(for="form__name") Название
+      input#form__name.form__input.form__input_wide(type="text", name="name", placeholder="Козье молоко от «Петровской». Каждый день вкусное", required="required", maxlength="50")
+      .form__hint 
+        p Заголовок до 50 знаков. Проверяйте текст — с опечатками искать труднее.
+
+
+    fieldset.form__field-group
+      
+      fieldset.form__field
+        label.form__label(for="form__price") Цена, руб. (розница)
+        input#form__price.form__input.form__input_short(type="text", name="price", placeholder="56", required="required")
+      
+      fieldset.form__field
+        label.form__label(for="form__unit") За единицу измерения
+        select#form__unit.form__select(name="units", placeholder="Выбрать", required="required")
+          option Центнер
+          option Килограмм
+          option Грамм
+          option Миллиграмм
+
+    fieldset.form__field-group.form__field-group_four
+
+      fieldset.form__field
+        label.form__label(for="form__price_opt") Цена, руб. (опт)
+        input#form__price_opt.form__input.form__input_short(type="text", name="price_opt", placeholder="", required="required")
+      
+      fieldset.form__field
+        label.form__label(for="form__volume") От, объем
+        input#form__volume.form__input.form__input_short(type="text", name="from_volume", placeholder="", required="required")
+      
+      fieldset.form__field.form__field_fixed
+        label.form__label(for="form__unit_opt") За единицу измерения
+        select#form__unit_opt.form__select(name="opt_units", placeholder="Выбрать", required="required")
+          option Центнер
+          option Килограмм
+          option Грамм
+          option Миллиграмм
+
+        .form__hint 
+          p Опционально, можете не указывать.
+
+    fieldset.form__field
+      label.form__label(for="form__abstract") Описание
+
+      textarea#form__abstract.form__textarea(cols="80", rows="10", name="instructions", required="required", maxlength="300")
+      .form__hint 
+        p Описание до 300 знаков. Советуем рассказать о свойствах продукта и способах приготовления.
+        p Жирность, части туши, термообработка — клиентов интересует всё.
+
+    fieldset.form__field
+      h3.form__label Фотографии
+      .form__photos
+
+        button.form__photos-add(type="button"): b Добавить 
+          br
+          | фото
+    
+  menu.form__menu
+    button.form__publish(type="submit") Продолжить

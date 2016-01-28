@@ -1,0 +1,60 @@
+@import "../../helpers/*";
+
+.team {
+  background: $crayon;
+  
+  &__wrapper {
+    max-width: 1280px;
+    padding: 85px 0 100px;
+    margin: auto;
+    }
+  
+  &__list {
+    margin: 0 0 35px;
+    font-size: 0;
+    text-align: center;
+    }
+  
+  &__abstract {
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 200;
+    max-width: 940px;
+    text-align: center;
+    margin: 0 auto 50px;
+    }
+
+  &__contact {
+    @mixin red_button;
+    max-width: 100%;
+    width: 420px;
+    margin: 0 50px 0 440px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+  &__title {
+    @mixin title;
+    background-image: url('../images/advice__icon.svg');
+    margin: 0 0 55px;
+    }
+  }
+
+
+@media (max-width: 1279px) {
+  .team {
+    text-align: center;
+    
+    &__list {
+      text-align: left;
+      }
+    
+    &__abstract {
+      padding: 0 20px;;
+      }
+    
+    &__contact {
+      margin: auto;
+      }
+    }
+}

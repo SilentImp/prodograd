@@ -1,0 +1,112 @@
+form.form.form_manufacturer.tab.tab_current(action="/forms/save", method="post", data-tab="manufacturer")
+
+  fieldset.form__field.form__field_fixed
+    label.form__label(for="form__name") Название
+    input#form__name.form__input.form__input_wide(type="text", name="name", placeholder="Усадьба «Петровская»", maxlength="30")
+    .form__hint 
+      p Заголовок до 30 знаков.
+
+  fieldset.form__field.form__field_fixed
+    label.form__label(for="form__year") Начало деятельности
+    select#form__year.form__select.form__select_short(name="year", placeholder="2001")
+      -var year = 1900
+      while year < 2016
+        option= year++
+    .form__hint 
+      p Укажите год основания
+
+  fieldset.form__field-group
+    
+    fieldset.form__field
+      label.form__label(for="form__volume") Площадь, ГА
+      input#form__volume.form__input.form__input_short(type="text", name="volume", placeholder="", required="required")
+    
+    fieldset.form__field
+      label.form__label(for="form__count") Скот, голов
+      input#form__count.form__input.form__input_short(type="number", name="count", placeholder="", required="required")
+
+      .form__hint 
+        p В гектарах и штуках
+  
+
+  fieldset.form__field
+    h3.form__label Категории продуктов
+    .form__radio-group.form__radio-group_three
+      .form__radio
+        input#form__category-1.form__radio-input(type="checkbox", name="categories[]", value="1")
+        label.form__radio-label(for="form__category-1") Мясо
+      .form__radio
+        input#form__category-2.form__radio-input(type="checkbox", name="categories[]", value="2")
+        label.form__radio-label(for="form__category-2") Молочные продукты
+      .form__radio
+        input#form__category-3.form__radio-input(type="checkbox", name="categories[]", value="3")
+        label.form__radio-label(for="form__category-3") Хлеб и выпечка
+      .form__radio
+        input#form__category-4.form__radio-input(type="checkbox", name="categories[]", value="4")
+        label.form__radio-label(for="form__category-4") Птица и яйцо
+      .form__radio
+        input#form__category-5.form__radio-input(type="checkbox", name="categories[]", value="5")
+        label.form__radio-label(for="form__category-5") Овощи и фрукты
+      .form__radio
+        input#form__category-6.form__radio-input(type="checkbox", name="categories[]", value="6")
+        label.form__radio-label(for="form__category-6") Напитки
+      .form__radio
+        input#form__category-7.form__radio-input(type="checkbox", name="categories[]", value="7")
+        label.form__radio-label(for="form__category-7") Рыба
+      .form__radio
+        input#form__category-8.form__radio-input(type="checkbox", name="categories[]", value="8")
+        label.form__radio-label(for="form__category-8") Дикоросы
+      .form__radio
+        input#form__category-9.form__radio-input(type="checkbox", name="categories[]", value="9")
+        label.form__radio-label(for="form__category-9") Изделия
+
+
+  fieldset.form__field
+    label.form__label(for="form__abstract") Описание
+
+    textarea#form__abstract.form__textarea(cols="80", rows="10", name="instructions", required="required", maxlength="300")
+    .form__hint 
+      p Описание до 400 знаков. Напишите о том, как устроено ваше дело. 
+      p Расскажите о содержании животных, выращивании овощей и фруктов, приготовлении молока.
+
+  fieldset.form__field
+    h3.form__label Обслуживание
+    .form__radio-group.form__radio-group_list
+      .form__radio
+        input#form__service-1.form__radio-input(type="checkbox", name="service[]", value="1")
+        label.form__radio-label(for="form__service-1") Оплата наличными
+      .form__radio
+        input#form__service-2.form__radio-input(type="checkbox", name="service[]", value="2")
+        label.form__radio-label(for="form__service-2") Бесплатная доставка от 10кг.
+      .form__radio
+        input#form__service-3.form__radio-input(type="checkbox", name="service[]", value="3")
+        label.form__radio-label(for="form__service-3") Оплата картой
+      .form__radio
+        input#form__service-4.form__radio-input(type="checkbox", name="service[]", value="4")
+        label.form__radio-label(for="form__service-4") Самовывоз круглосуточно
+      .form__radio
+        input#form__service-5.form__radio-input(type="checkbox", name="service[]", value="5")
+        label.form__radio-label(for="form__service-5") Самовывоз
+      .form__radio
+        input#form__service-6.form__radio-input(type="checkbox", name="service[]", value="6")
+        label.form__radio-label(for="form__service-6") Доставка на дом
+      .form__radio
+        input#form__service-7.form__radio-input(type="checkbox", name="service[]", value="7")
+        label.form__radio-label(for="form__service-7") Доставка в город
+      .form__radio
+        input#form__service-8.form__radio-input(type="checkbox", name="service[]", value="8")
+        label.form__radio-label(for="form__service-8") Любой способ оплаты
+
+    .form__hint: p Выберите не более 3 удобных вам варианта обслуживания.
+
+  fieldset.form__field
+    h3.form__label Фотографии
+    .form__photos
+
+      button.form__photos-add(type="button"): b Добавить 
+        br
+        | фото
+    
+  menu.form__menu
+    button.form__publish(type="submit") Сохранить
+    button.form__back(type="reset") Отменить изменения

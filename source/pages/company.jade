@@ -1,0 +1,16 @@
+extends ../elements/layout/layout.jade
+
+block title
+  title Производитель | Ярмонка
+
+block content
+  include ../elements/header/header.jade
+  include ../elements/edit-message/edit-message.jade
+  include ../elements/manufacturer/manufacturer.jade
+  include ../elements/contacts/contacts_buttons.jade
+  include ../elements/stores/store.jade
+  include ../elements/rate/rate.jade
+  include ../elements/purchases/purchases-company.jade
+
+block scripts
+  script(src="//maps.googleapis.com/maps/api/js")

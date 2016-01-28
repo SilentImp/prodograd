@@ -1,0 +1,9 @@
+form.form.form_like(action="/user/like", method="post")
+
+  fieldset.form__field
+    label.form__label(for="form-like__comment") Отзыв:
+    textarea#form-like__comment.form__textarea.form__textarea_wide(type="text", name="comment", placeholder="Вас не люблю за статный вид, за гордый взор, за вольный нрав", required="required")
+    
+  menu.form__menu
+    button.form__button.form__button_send(type="submit") Отправить
+    button.form__link.form__button_like(type="button") Похвалить без отзыва

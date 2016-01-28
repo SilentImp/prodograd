@@ -1,0 +1,26 @@
+form.sell-auth(action="/sell/auth/", method="post")
+  h2.sell-auth__title Шаг 1. Вход на сайт
+  fieldset.sell-auth__field-group.sell-auth__field-group_main
+    h3.sell-auth__sub-title Обычный вход
+    fieldset.sell-auth__field
+      label.sell-auth__label(for="sell-auth__email") Электронная почта
+      input#sell-auth__email.sell-auth__input.sell-auth__input_middle(type="email", name="email", placeholder="some@mail.com", required="required")
+    fieldset.sell-auth__field
+      label.sell-auth__label(for="sell-auth__pass") Пароль
+      input#sell-auth__pass.sell-auth__input.sell-auth__input_middle(type="password", name="password", placeholder="Орел", required="required")
+    menu.sell-auth__menu
+      button.sell-auth__login(type="submit") Войти
+      a.sell-auth__recovery.recovery-link(href="#") Забыли пароль?
+  fieldset.sell-auth__field-group
+    h3.sell-auth__sub-title Быстрый вход
+    nav.sell-auth__socials
+      a.sell-auth__social.sell-auth__social_vk(href="#") 
+        +icon('vk', 'sell-auth__social-icon')
+        | Вконтакте
+      a.sell-auth__social.sell-auth__social_fb(href="#") 
+        +icon('fb', 'sell-auth__social-icon')
+        | Facebook
+      a.sell-auth__social.sell-auth__social_ok(href="#") 
+        +icon('ok', 'sell-auth__social-icon')
+        | Одноклассники
+    a.sell-auth__by-mail.register-link(href="#") Регистрация по почте?
