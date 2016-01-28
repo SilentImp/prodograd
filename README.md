@@ -1,6 +1,6 @@
 # Prodograd
 
-<p>Проект сделан в составе студии <a href="http://www.nimax.ru/"><img src="nimax.svg" alt="Логотип Nimax"></a></p>
+<p>Проект сделан в составе студии <a href="http://www.nimax.ru/"><img src="nimax.png" alt="Логотип Nimax"></a></p>
 
 * [Page list](http://silentimp.github.io/prodograd/)
 
