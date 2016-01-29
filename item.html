@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=1280px, user-scalable=no"/>
+    <title>Карточка товара | Ярмонка</title>
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="js/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="js/select2/dist/css/select2.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+
+<symbol id="icon-all" viewBox="222 235 150 150">
+        <path class="st0" d="M282.7 287.1h50.4c1 0 1.8-.8 1.8-1.8s-.8-1.8-1.8-1.8h-50.4c-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8zM333.2 308.4h-50.4c-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8h50.4c1 0 1.8-.8 1.8-1.8s-.8-1.8-1.8-1.8zM333.2 332.9h-50.4c-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8h50.4c1 0 1.8-.8 1.8-1.8 0-.9-.8-1.8-1.8-1.8zM265.3 279c-3.4 0-6.2 2.8-6.2 6.2 0 3.4 2.8 6.2 6.2 6.2s6.2-2.8 6.2-6.2c0-3.4-2.8-6.2-6.2-6.2zm0 9c-1.4 0-2.6-1.2-2.6-2.6 0-1.4 1.2-2.6 2.6-2.6s2.6 1.2 2.6 2.6c0 1.4-1.2 2.6-2.6 2.6zM265.3 304c-3.4 0-6.2 2.8-6.2 6.2 0 3.4 2.8 6.2 6.2 6.2s6.2-2.8 6.2-6.2c.1-3.4-2.8-6.2-6.2-6.2zm0 8.9c-1.4 0-2.6-1.2-2.6-2.6s1.2-2.6 2.6-2.6 2.6 1.2 2.6 2.6c.1 1.5-1.2 2.6-2.6 2.6zM265.3 328.5c-3.4 0-6.2 2.8-6.2 6.2 0 3.4 2.8 6.2 6.2 6.2s6.2-2.8 6.2-6.2c.1-3.4-2.8-6.2-6.2-6.2zm0 9c-1.4 0-2.6-1.2-2.6-2.6s1.2-2.6 2.6-2.6 2.6 1.2 2.6 2.6c.1 1.4-1.2 2.6-2.6 2.6z"/>
+</symbol>
+
+<symbol id="icon-backward" viewBox="0 0 35 35">
+        <path class="st0" d="M13 13.6l3.7-3.7s.1 0 .1-.1c.2-.2.5-.4.8-.4s.6.2.8.4c0 0 .1 0 .1.1l3.7 3.7c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0l-2.1-2.1v11.6c0 .6-.4 1-1 1s-1-.4-1-1V12.9L14.4 15c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4z"/>
+</symbol>
+
+<symbol id="icon-bread" viewBox="222 235 150 150">
+        <path class="st0" d="M312.7 279.4c-.4-.2-.6-.3-.7-.3-.1 0-.2-.1-.4-.1-4.6-1.6-9.6-2.5-14.6-2.5-11.9 0-23.3 4.7-32.2 13.4-8.5 8.3-13.3 19-13.3 29.3 0 14.6 17.9 24.1 45.5 24.1 28.1 0 45.5-9.2 45.5-24.1 0-17.5-12.8-33.5-29.8-39.8zM297 339.9c-20.9 0-42-6.4-42-20.5 0-8.9 4.2-18.4 11.2-25.8.6.3 2.2 1.6 2.9 6.7.1.9.9 1.6 1.7 1.6h.2c1-.1 1.7-1 1.5-2-.6-5.1-2.3-7.6-3.8-8.8 2.7-2.4 5.7-4.5 8.9-6.2 1.9 1.3 7.9 6.3 7.5 19.9 0 1 .7 1.8 1.7 1.8h.1c.9 0 1.7-.8 1.8-1.7.4-12.6-4.3-18.9-7.4-21.7 3.6-1.5 7.5-2.5 11.6-2.9h.1c.5 0 12.4 1.4 10.4 25.5-.1 1 .6 1.8 1.6 1.9h.1c.9 0 1.7-.7 1.8-1.6.9-11.1-.9-19.4-5.3-24.5-.4-.5-.9-.9-1.3-1.4 3.7.3 7.3 1.1 10.7 2.3 1.7.7 10.7 5.4 9.4 21.1-.1 1 .6 1.8 1.6 1.9h.1c.9 0 1.7-.7 1.8-1.6.6-7.2-.8-12.4-2.8-16.2 10.6 7.3 17.7 18.9 17.7 31.5.2 15.3-21.5 20.7-41.8 20.7z"/>
+</symbol>
+
+<symbol id="icon-drinks" viewBox="222 235 150 150">
+        <path class="st0" d="M333.8 317c.3-2.4.5-4.9.5-7.4s-.2-5-.5-7.5v-.2c-1.4-10.8-5.5-21.2-12-29.8-2.3-5.7-13.9-8.6-24.8-8.6-10.6 0-21.9 2.9-24.6 8.3-6.6 8.7-10.9 19.4-12.2 30.2v.2c-.3 2.4-.5 5-.5 7.4 0 14.8 4.7 28.6 13.3 39.1 2.4 3.2 12.3 7.8 24.1 7.8 12.1 0 21.2-4.6 23.9-7.7 6.8-8.3 11.2-18.6 12.7-30 0-.6.1-1.2.1-1.8zm-70.2 0c-.3-2.4-.5-4.9-.5-7.3v-1.4c5.2 4.9 16.7 8.7 33.7 8.7 17 0 28.4-3.9 33.7-8.7v1.4c0 2.9-.2 5.8-.6 8.6-1.9 6.8-18.3 11.5-33 11.5-15.7.1-33.3-5.3-33.3-12.8zm16.9-34.4c-2.7 5.5-4.9 12.3-6.1 19.6-.2 1 .5 1.9 1.4 2.1h.3c.9 0 1.6-.6 1.8-1.5 1.3-7.2 3.4-14 6.1-19.2 4 1 8.6 1.4 13 1.4 10.2 0 20.8-2.6 24.1-7.5 4.8 7.4 7.9 15.8 9 24.8-.5 5.3-14 11.1-33.2 11.1-19.3 0-32.8-5.8-33.2-11 1.2-8.7 4.3-17.4 9.1-24.8 1.4 2 4.2 3.7 7.7 5zm16.5-15.4c13.4 0 21.6 4.1 21.6 7.2 0 3-8.2 7.2-21.6 7.2-13.4 0-21.6-4.1-21.6-7.2s8.1-7.2 21.6-7.2zm21.1 79.3c-1.9 2.3-9.9 6.5-21.1 6.5-11.4 0-19.9-4.7-21.2-6.4 0 0 0-.1-.1-.1-5-5.9-8.5-13.1-10.5-21 6.4 4.8 18.1 7.9 31.7 7.9 13.6 0 25.3-3.2 31.7-7.9-2 7.9-5.6 15-10.5 21z"/><ellipse class="st0" cx="303.7" cy="274.3" rx="6" ry="2.6"/>
+</symbol>
+
+<symbol id="icon-eggs" viewBox="222 235 150 150">
+        <path class="st0" d="M317.6 320.5c.6-2.8 1.2-5.3 2.1-7.3 4.1-10.9 5.2-14.2 2.2-18.4l13.3-13.3c2 .3 4-.4 5.4-1.8 2.5-2.5 2.5-6.6 0-9.1-1-1-2.1-1.6-3.5-1.8-.2-1.3-.8-2.5-1.8-3.5-2.5-2.5-6.6-2.5-9.1 0-1.5 1.5-2.1 3.6-1.8 5.5l-13 13.2c-3.9-2.9-6.7-2.2-16.1.7-.9.3-1.9.6-2.9.9-1.6.5-3.5 1-5.7 1.4-7.3 1.7-17.2 4-25.5 10.6-.4.4-.6.8-.6 1.3s.2 1 .5 1.3l.2.1c.1.1.2.2.4.3 8 8 8 21.2 0 29.2-2.4 2.4-5.5 4.3-8.8 5.2-.5.2-.9.5-1.2 1-.2.4-.2 1 0 1.5 1.6 3.5 3.8 6.6 6.5 9.3 6.2 6.2 14.5 9.6 23.3 9.6s17.1-3.4 23.3-9.6c8.6-8.2 11-18.2 12.8-26.3zm10.5-49.7c-.4-1.1-.1-2.2.6-2.9 1.2-1.2 2.9-1.2 4 0 .6.6.9 1.5.8 2.4-.2 1.1.9 2.1 2.1 2.1.9-.1 1.8.2 2.4.8 1.2 1.2 1.2 2.9 0 4-.8.8-1.9 1-2.9.7-.6-.2-1.3 0-1.8.4L319.6 292c-.7-.7-1.4-1.5-2.3-2.4l-.1-.1-1.2-1.2-1.9-1.9 13.7-13.7c.4-.5.5-1.2.3-1.9zm-46.7 82.4c-7.9 0-15.3-3-20.8-8.7-2-2-3.6-4.1-4.9-6.5 3.1-1.2 5.9-3 8.3-5.4 9.1-9.1 9.5-23.7 1-33.3 7.3-5.2 16-7.2 22.5-8.7 2.3-.5 4.3-1 6-1.5 1.1-.4 2.1-.6 2.9-.9 5.5-1.8 8.6-2.8 10.5-2.4 1.7.3 3.1 1.7 6.5 5l1.2 1.2c3.7 3.7 5.2 5.3 5.4 7.2.3 2.3-1.1 5.9-3.7 12.6-.9 2.2-1.5 4.9-2.2 7.8-1.8 7.6-4.1 17-12 24.9-5.4 5.7-12.8 8.7-20.7 8.7z"/><path class="st0" d="M299.7 336.8c-.7-.7-1.8-.7-2.5 0-7.6 7.6-19.5 8.7-29 2.8-.8-.5-2-.3-2.5.5-.4.7-.4 1.6.3 2.2.1.1.2.2.4.3 10.9 6.8 24.6 5.4 33.4-3.3.6-.7.6-1.8-.1-2.5z"/>
+</symbol>
+
+<symbol id="icon-fb" viewBox="0 0 39 39">
+        <defs></defs><path d="M19.5 0C8.73 0 0 8.73 0 19.5S8.73 39 19.5 39 39 30.27 39 19.5 30.27 0 19.5 0zm4.555 19.5H21.13v10.608h-4.383v-10.61h-2.19v-3.655h2.19v-2.195c0-2.982 1.237-4.756 4.75-4.756h2.925v3.656h-1.828c-1.368 0-1.46.512-1.46 1.465l-.003 1.83h3.313l-.388 3.656z" class="cls-1"/>
+</symbol>
+
+<symbol id="icon-fish" viewBox="222 235 150 150">
+        <path class="st0" d="M354.7 289.4c-.4-.8-1.5-1.2-2.4-.7-7.8 4.1-13.7 8-18.2 11.8 0-.1-.1-.1-.1-.2l-.6-.6c-11.7-12.6-28-19.7-45.3-19.7-21.9 0-41.7 11.3-53.1 30-.4.6-.4 1.3 0 1.9 11.5 17.6 30.8 28.1 51.8 28.1 17.9 0 34.7-7.6 46.4-21 5.5 4.9 11.8 9 18.9 12.4.9.4 1.9.1 2.3-.7.2-.4 4.7-8.4 4.7-20.6.2-12.3-4.2-20.4-4.4-20.7zM287 336.5c-19.4 0-37.4-9.6-48.3-25.6 10.7-17.1 29.2-27.4 49.5-27.4 17 0 33.1 7.4 44.2 20.3 1.6 1.9 3.8 6.2-.4 11.5-11.2 13.5-27.6 21.2-45 21.2zm65.3-9.1c-6.2-3.1-11.7-6.9-16.6-11.2 3.6-5.4 2.2-10.1.6-12.9 3.9-3.5 9.1-7 16-10.6 1.2 2.7 3.5 9.1 3.5 17.4 0 8.3-2.3 14.6-3.5 17.3z"/><path class="st0" d="M259 298.5c-3.4 0-6.1 2.7-6.1 6.1 0 3.4 2.7 6.1 6.1 6.1s6.1-2.7 6.1-6.1c.1-3.3-2.7-6.1-6.1-6.1zm0 8.8c-1.4 0-2.6-1.2-2.6-2.6 0-1.4 1.2-2.6 2.6-2.6 1.4 0 2.6 1.2 2.6 2.6 0 1.4-1.2 2.6-2.6 2.6zM283.5 305c-.8.5-1.1 1.6-.5 2.5.4.5.9.8 1.5.8.4 0 .6-.1 1-.3 2.4-1.5 3.8-4.2 3.8-7s-1.4-5.4-3.8-7c-.8-.5-1.9-.3-2.5.5-.5.8-.3 1.9.5 2.5 1.3.9 2.2 2.4 2.2 4s-.8 3.1-2.2 4zM285.7 312.1c-.8-.5-1.9-.3-2.5.5-.5.8-.3 1.9.5 2.5 1.3.9 2.2 2.4 2.2 4 0 1.7-.8 3.2-2.2 4.1-.8.5-1.1 1.6-.5 2.5.4.5.9.8 1.5.8.4 0 .6-.1 1-.3 2.4-1.5 3.8-4.2 3.8-7-.1-3-1.5-5.6-3.8-7.1zM294.3 302.6c-.8-.5-1.9-.3-2.5.5s-.3 1.9.5 2.5c1.3.9 2.2 2.4 2.2 4 0 1.7-.8 3.2-2.2 4.1-.8.5-1.1 1.6-.5 2.5.4.5.9.8 1.5.8.4 0 .6-.1 1-.3 2.4-1.5 3.8-4.2 3.8-7 .1-2.9-1.4-5.6-3.8-7.1z"/>
+</symbol>
+
+<symbol id="icon-forward" viewBox="0 0 35 35">
+        <path class="st0" d="M22 21.4L18.4 25s-.1 0-.1.1c-.2.2-.5.4-.8.4s-.6-.2-.8-.4c0 0-.1 0-.1-.1L13 21.4c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l2.1 2.1V10.5c0-.6.4-1 1-1s1 .4 1 1v11.6l2.1-2.1c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4z"/>
+</symbol>
+
+<symbol id="icon-fruits" viewBox="222 235 150 150">
+        <path class="st0" d="M335.1 282.1c2.3-2.8 2.1-7-.5-9.6-1.4-1.4-3.2-2.1-5.1-2.1-1.6 0-3.2.5-4.5 1.5-14.8-8.4-36.8-3.2-52.9 13s-21.5 38-13 52.9c-2.3 2.8-2.1 7 .5 9.6 2.6 2.6 6.8 2.8 9.6.5 4.7 2.7 10.1 4 15.9 4 12.3 0 26.1-5.9 37-16.9 16-16.1 21.4-38 13-52.9zm-15.6 50.4c-15.1 15.1-36.5 20.2-49.7 11.7-.3-.2-.6-.3-1-.3-.5 0-1.1.3-1.4.6l-.2.2c0 .1-.1.1-.1.1-1.4 1.4-3.7 1.4-5.1 0-1.4-1.4-1.4-3.7 0-5.1 0 0 .1-.1.2-.1l.2-.2c.7-.5.9-1.6.4-2.3-8.5-13.2-3.4-34.5 11.7-49.7 15.1-15.1 36.5-20.2 49.7-11.7.8.5 1.8.4 2.3-.4l.2-.2c0-.1.1-.1.1-.2.7-.7 1.6-1.1 2.5-1.1 1 0 1.9.4 2.5 1.1 1.4 1.4 1.4 3.7 0 5.1l-.1.1-.2.2c-.7.5-.9 1.6-.4 2.3 8.6 13.4 3.5 34.8-11.6 49.9z"/><path class="st0" d="M271.4 308.7c-.8-.5-2-.3-2.5.5-.1.2-2.8 4.4-2.6 11.4 0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8c-.2-5.9 2.1-9.4 2.1-9.4.5-.8.2-1.9-.6-2.5zM282 305.6c-4 4.4-4.7 9.8-4.8 10-.1 1 .5 1.9 1.5 2h.3c.9 0 1.6-.6 1.8-1.5 0 0 .6-4.5 3.9-8.1.6-.7.6-1.9-.2-2.5-.7-.7-1.9-.7-2.5.1zM287.8 287.6c-4.7 2.3-8.8 7.1-9 7.3-.6.7-.5 1.9.2 2.5.4.3.7.5 1.2.5s1-.2 1.4-.6c0 0 3.9-4.5 7.8-6.4.9-.5 1.3-1.5.8-2.4-.5-1-1.5-1.3-2.4-.9z"/>
+</symbol>
+
+<symbol id="icon-handmade" viewBox="222 235 150 150">
+        <path class="st0" d="M316.3 294.9l-11.3-1.6-5.1-10.2c-.3-.6-.9-1-1.6-1s-1.4.4-1.6 1l-5.1 10.2-11.3 1.6c-.7.1-1.3.5-1.4 1.3-.2.6 0 1.4.5 1.9l8.1 8-1.9 11.2c-.1.7.2 1.4.7 1.8.5.4 1.3.5 1.9.2l10.1-5.3 10.1 5.3c.3.2.5.2.8.2.4 0 .7-.1 1.1-.4.5-.4.8-1.1.7-1.8l-1.9-11.2 8.1-8c.5-.5.6-1.2.5-1.9-.1-.8-.8-1.2-1.4-1.3zm-10.4 9.1c-.5.5-.6 1-.5 1.6l1.4 8.6-7.7-4.1c-.3-.2-.5-.2-.8-.2s-.5.1-.8.2l-7.7 4.1 1.4-8.6c.1-.5-.1-1.2-.5-1.6l-6.2-6.1 8.6-1.3c.6-.1 1.1-.5 1.4-1l3.9-7.8 3.9 7.8c.3.5.8.9 1.4 1l8.6 1.3-6.4 6.1z"/><path class="st0" d="M345.4 308.8c4-4 4-10.5 0-14.4-1.9-1.9-4.5-3-7.2-3s-5.3 1.1-7.2 3l-1.1 1.1V294c0-17.4-14.1-31.5-31.5-31.5s-31.5 14.1-31.5 31.5v41.1h-.8c-2.5 0-4.5 2-4.5 4.5V353c0 2.5 2 4.5 4.5 4.5h64.2c2.5 0 4.5-2 4.5-4.5v-13.4c0-2.5-2-4.5-4.5-4.5h-.5v-10.7l15.6-15.6zm-14.2 30.8V353c0 .5-.5.9-.9.9h-64.2c-.5 0-.9-.5-.9-.9v-13.4c0-.5.5-.9.9-.9h2c.2.1.5.2.7.2h59.4c.3 0 .5-.1.7-.2h1.5c.4 0 .8.4.8.9zm-60.7-4.5V294c0-15.4 12.5-27.9 27.9-27.9s27.9 12.5 27.9 27.9v6c0 .7.5 1.4 1.1 1.6.6.3 1.4.1 2-.4l4.3-4.3c1.3-1.3 2.9-1.9 4.6-1.9 1.8 0 3.4.7 4.6 1.9 2.5 2.5 2.5 6.8 0 9.3l-16.1 16.1c-.4.4-.5.8-.5 1.3V335l-55.8.1z"/>
+</symbol>
+
+<symbol id="icon-meat" viewBox="222 235 150 150">
+        <path class="st0" d="M334.3 298.1v-1.7c0-18.7-7.9-29.9-21-29.9-7.4 0-11 3-15.8 7.2-3.9 3.3-8.7 7.4-17.4 11.6-12.3 6-20.3 18.6-20.3 32.3 0 19.8 16.1 35.9 35.9 35.9 12 0 23.1-5.9 29.7-15.8 8.9-12 8.9-27.9 8.9-39.6zm-11.8 37.6c-6.1 8.9-16 14.2-26.8 14.2-17.8 0-32.3-14.5-32.3-32.3 0-12.3 7.2-23.7 18.2-29.1 9.1-4.4 14.1-8.7 18.2-12.1 4.6-3.9 7.4-6.3 13.5-6.3 11 0 17.4 9.6 17.4 26.3v1.7c-.1 11.1 0 26.4-8.2 37.6z"/><path class="st0" d="M299.6 320.5c0-4.6-3.8-8.4-8.4-8.4-4.6 0-8.4 3.8-8.4 8.4 0 4.6 3.8 8.4 8.4 8.4 4.6 0 8.4-3.8 8.4-8.4zm-8.4 4.8c-2.6 0-4.8-2.2-4.8-4.8s2.2-4.8 4.8-4.8c2.6 0 4.8 2.2 4.8 4.8 0 2.6-2.2 4.8-4.8 4.8zM286.4 296c.3 0 .5-.1.8-.2 7.5-3.8 12.3-7.8 16.2-11 4.3-3.4 7.1-5.8 10.7-5.8 1 0 1.8-.8 1.8-1.8s-.8-1.8-1.8-1.8c-5 0-8.5 2.9-13 6.6-3.7 3.1-8.4 6.9-15.6 10.5-.9.5-1.3 1.5-.8 2.4.3.8.9 1.1 1.7 1.1zM319.5 328.1c-.8-.5-2-.3-2.5.5-4.8 7.3-12.7 11.7-21.2 11.7-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8c9.7 0 18.7-5 24.2-13.4.6-.7.3-1.9-.5-2.4z"/>
+</symbol>
+
+<symbol id="icon-milk" viewBox="222 235 150 150">
+        <path class="st0" d="M317.6 289.8l-.9-1.2c-2.8-3.5-6.7-8.2-7.6-18.4V261c0-.2 0-.3-.1-.3-.4-3-4.6-5.7-12-5.7s-11.6 2.8-12 5.7c0 .1-.1.3-.1.3v9.2c-1 11.2-3.7 14.7-6.6 18.4l-.8.9c-2.5 3-4.6 5.6-4.6 9.6V353.3c0 6.7 10.3 11.6 24 11.6s24-5 24-11.6v-54.2c.1-1.6.1-5.2-3.3-9.3zm-20.5-31.4c5.2 0 8.5 1.9 8.6 2.9v.3c0 1-3.3 3-8.6 3s-8.6-1.9-8.6-2.9v-.1-.3c.2-1.2 3.4-2.9 8.6-2.9zm-16.8 33.4l.8-1c3-3.9 6.2-7.9 7.3-20.2V266c2 1.1 4.9 1.8 8.6 1.8s6.6-.7 8.6-1.8V270.6c1 11.3 5.2 16.5 8.3 20.3.3.4.7.8.9 1.2l.1.1c2.4 2.7 2.7 5.1 2.7 6.7-4.1-3.4-11.6-5.5-20.7-5.5-8.9 0-16.4 2.1-20.6 5.5.4-2.7 1.8-4.5 4-7.1zm37.4 13.1c0 3.9-8.5 8.3-20.7 8.3-12.1 0-20.6-4.4-20.7-8.3 0-3.9 8.5-8.3 20.7-8.3s20.7 4.3 20.7 8.3zm-20.6 56.7c-12.1 0-20.7-4.4-20.7-8.3v-42.4c4.1 3.4 11.6 5.5 20.7 5.5 9 0 16.5-2.2 20.7-5.5v42.4c-.1 3.9-8.6 8.3-20.7 8.3z"/><path class="st0" d="M283.9 321.3c-.9 0-1.7.8-1.7 1.7v26c0 .9.8 1.7 1.7 1.7s1.7-.8 1.7-1.7v-26c0-.9-.7-1.7-1.7-1.7z"/>
+</symbol>
+
+<symbol id="icon-ok" viewBox="0 0 39 39">
+        <defs></defs><path d="M19.5 39C8.73 39 0 30.27 0 19.5S8.73 0 19.5 0 39 8.73 39 19.5 30.27 39 19.5 39zm.004-30.006c-2.79 0-5.05 2.195-5.05 4.902 0 2.708 2.26 4.904 5.05 4.904 2.788 0 5.05-2.196 5.05-4.904 0-2.707-2.262-4.902-5.05-4.902zm5.05 10.506c-.72 0-2.164 1.4-5.05 1.4-2.887 0-4.33-1.4-5.05-1.4-.798 0-1.444.627-1.444 1.4 0 .7.41 1.037.72 1.215.857.485 3.61 1.587 3.61 1.587l-3.068 3.81s-.54.655-.54 1.094c0 .773.646 1.4 1.442 1.4.737 0 1.07-.458 1.07-.458s3.255-3.75 3.26-3.745c.005-.004 3.258 3.744 3.258 3.744s.334.46 1.07.46c.797 0 1.444-.628 1.444-1.402 0-.44-.54-1.094-.54-1.094l-3.068-3.808s2.752-1.102 3.608-1.587c.312-.178.722-.514.722-1.215 0-.773-.647-1.4-1.444-1.4zm-5.05-3.152c-1.396 0-2.526-1.097-2.526-2.452 0-1.353 1.13-2.45 2.526-2.45 1.394 0 2.525 1.097 2.525 2.45 0 1.355-1.132 2.452-2.526 2.452z" class="cls-1"/>
+</symbol>
+
+<symbol id="icon-orders" viewBox="0 0 150 150">
+        <path d="M99.9 110.5H50.1c-3.6 0-6.9-1.5-9.2-4.4-2.8-3.3-3.9-8.1-2.9-13l4-20.7c1.3-6.7 7.2-11.8 13.8-11.8h38.4c6.6 0 12.5 5.1 13.8 11.8l4 20.7c1 4.9-.1 9.7-2.9 13.1-2.3 2.8-5.6 4.3-9.2 4.3zm-44.1-42c-2.7 0-5.4 2.5-6 5.4l-4 20.7c-.5 2.5 0 4.9 1.2 6.5.8 1 1.8 1.5 3.1 1.5h49.8c1.2 0 2.3-.5 3.1-1.5 1.2-1.5 1.7-3.9 1.2-6.5l-4-20.7c-.6-2.9-3.3-5.4-6-5.4H55.8zm9.8 0h-2.5c-5.7-.2-6.5-3.7-6.6-5.2-.4-7.1 1.8-13.8 6.2-18.5 3.2-3.4 7.2-5.2 11.3-5.2 9.8 0 17.5 10.3 17.5 23.5 0 2-.9 3.3-1.6 4-1.7 1.6-3.8 1.5-5.1 1.5H68c-.9-.1-1.7-.1-2.4-.1zm-1.1-8h18.9c-.8-7.3-4.7-13-9.4-13-1.9 0-3.8 1-5.5 2.7-2.4 2.6-3.8 6.3-4 10.3z"/>
+</symbol>
+
+<symbol id="icon-person" viewBox="0 0 150 150">
+        <path d="M75.5 110H75c-21.8-.1-28.6-10.3-28.9-10.7l-.6-.9v-1.1C45.5 82 58.7 69.5 75 69.5s29.5 12.5 29.5 27.8v1.1l-.6.9c-.3.4-7.1 10.7-28.4 10.7zM52.9 96c1.8 1.8 8 6.6 22.1 6.7 14.3.1 20.2-4.7 22-6.6-.6-10.8-10.3-19.2-22-19.2S53.7 85.3 52.9 96z"/><path d="M75 76.8c-10.2 0-18.4-8.3-18.4-18.4S64.8 40 75 40s18.4 8.3 18.4 18.4S85.2 76.8 75 76.8zm0-29.4c-6.1 0-11.1 5-11.1 11.1s5 11.1 11.1 11.1 11.1-5 11.1-11.1-5-11.1-11.1-11.1z"/>
+</symbol>
+
+<symbol id="icon-vk" viewBox="0 0 39 39">
+        <defs></defs><path d="M19.5 0C8.73 0 0 8.73 0 19.5S8.73 39 19.5 39 39 30.27 39 19.5 30.27 0 19.5 0zm10.12 26.796l-3.17.045s-.682.135-1.58-.48c-1.185-.814-2.304-2.93-3.175-2.655-.884.28-.856 2.185-.856 2.185s.005.407-.196.624c-.22.235-.648.282-.648.282h-1.42s-3.13.19-5.89-2.683c-3.006-3.13-5.662-9.346-5.662-9.346s-.154-.407.013-.604c.187-.222.696-.236.696-.236l3.393-.022s.32.053.548.22c.19.14.295.4.295.4s.547 1.386 1.273 2.64c1.418 2.45 2.078 2.985 2.56 2.723.7-.383.49-3.462.49-3.462s.013-1.118-.353-1.616c-.283-.385-.818-.498-1.054-.53-.19-.025.123-.467.53-.667.61-.3 1.688-.316 2.96-.303.994.01 1.28.072 1.668.166 1.17.282.773 1.373.773 3.99 0 .837-.15 2.015.453 2.406.26.168.896.025 2.485-2.674.754-1.28 1.32-2.784 1.32-2.784s.123-.268.314-.383c.196-.117.46-.08.46-.08l3.57-.023s1.073-.128 1.247.357c.183.508-.4 1.695-1.86 3.64-2.395 3.19-2.66 2.892-.672 4.738 1.9 1.763 2.293 2.62 2.357 2.728.787 1.304-.872 1.406-.872 1.406z" class="cls-1"/>
+</symbol>
+
+<symbol id="icon-wild" viewBox="534.3 -59.8 150 150">
+        <path class="st0" d="M609.3-30.3c-23.6 0-42.1 15.6-42.1 35.5 0 6.4 3.3 18.4 15.8 18.4 5.9 0 10.1-2.1 11.2-5.7.8-2.4-.1-5-2.1-6.5-2-1.3-3.9-1.2-5.6-.9-1.8.2-2.4.3-3.1-.6-.3-.4-1.2-2 .4-3.4 1-.7 4.9-3 16.8-3.1 0 3.6-.1 12.2-1.8 21.2-.5 2.9-1.6 6-2.7 9.3-2.6 8-5.3 16.2-1.4 21.7 2.5 3.5 7.2 5.2 14.5 5.2s12-1.7 14.5-5.2c3.9-5.4 1.2-13.7-1.4-21.7-1.1-3.3-2.1-6.5-2.7-9.3C618 15.6 618 7 618 3.4c11.9 0 15.9 2.3 16.8 3.1 1.8 1.3.7 3 .5 3.4-.6.9-1.3.9-3.1.6-1.6-.2-3.7-.4-5.6.9-2 1.4-2.9 4.1-2.1 6.5 1.2 3.6 5.3 5.7 11.2 5.7 12.5 0 15.8-12.1 15.8-18.4 0-19.9-18.6-35.5-42.2-35.5zm26.4 50.4c-5 0-7.3-1.7-7.8-3.3-.3-1 0-1.9.8-2.5.8-.5 1.7-.4 3-.3 1.9.3 4.5.5 6.3-2 1.3-1.8 2.3-5.7-1.2-8.3-3.4-2.6-10.8-4-20.8-3.8-1 0-1.7.8-1.8 1.7 0 .4-.4 11.6 1.8 23.7.5 3 1.7 6.4 2.8 9.7 2.3 7.1 4.8 14.5 1.9 18.4-1.8 2.4-5.7 3.7-11.6 3.7-5.9 0-9.8-1.2-11.6-3.7-2.9-4-.4-11.3 1.9-18.4 1.1-3.3 2.2-6.7 2.8-9.7C604.4 13.1 604 2 604 1.5c0-1-.8-1.7-1.8-1.7-10.1-.2-17.4 1.2-20.8 3.8-3.5 2.7-2.5 6.5-1.2 8.3 2 2.6 4.5 2.2 6.3 2 1.4-.2 2.3-.3 3 .3.8.5 1.2 1.5.8 2.5-.5 1.6-2.9 3.3-7.8 3.3-12 0-12.2-14.3-12.2-14.9 0-17.8 16.9-31.9 38.5-31.9s38.5 14 38.5 31.9c0 0 0 3.8-1.6 7.7-1.5 4.9-5 7.3-10 7.3z"/><path class="st0" d="M625.8-17.6c-5.2-2.5-12.3-3.4-16.8-3.4-5.8 0-11.2 1.2-16.2 3.4-.9.4-1.3 1.4-.9 2.3.3.6 1 1.1 1.6 1.1.3 0 .4-.1.7-.2 4.5-2 9.5-3 14.8-3 4.5 0 11 .9 15.2 3 .3.1.5.2.8.2.6 0 1.3-.4 1.6-1 .4-.9.1-2-.8-2.4z"/>
+</symbol>
+</svg>
+    <div class="page">
+      <nav class="header__navigation">
+        <div class="header__navigation-wrapper">
+          <button type="button" class="header__mobile-switch"></button><a href="/" class="header__logotype-wrapper">
+            <h1 class="header__logotype">ЯРМОНКА</h1></a>
+          <nav class="header__mobile"><a href="#" class="header__sell">Продать товар</a>
+            <div class="header__user header__user_logedin">
+                  <svg class="icon icon-person header__small-icon">
+                    <use xlink:href="#icon-person"></use>
+                  </svg><span class="header__user-wrapper">Федор Михалков</span>
+              <nav class="header__user-dropdown"><a href="ads.html" class="header__user-link">Мои объявления</a><a href="my_orders.html" class="header__user-link">Мои заказы</a><a href="profile.html" class="header__user-link">Профайл</a><a href="/logout/" class="header__user-link">Выйти</a></nav>
+            </div>
+            <button type="button" class="header__items">Продукты</button><a href="/orders/" data-message="Здесь новое!" class="header__orders">
+                  <svg class="icon icon-orders header__small-icon">
+                    <use xlink:href="#icon-orders"></use>
+                  </svg>Заказы</a>
+            <div class="header__city"> <span class="header__city-wrapper">Санкт-Петербург</span>
+              <nav class="header__city-dropdown"><a href="#" class="header__city-link">Москва</a><a href="#" class="header__city-link header__city-link_current">Санкт-Петербург</a></nav>
+            </div><a href="#" data-label="Поиск" class="header__search"></a>
+            <button type="button" class="header__mobile-close">Свернуть</button>
+          </nav>
+        </div>
+      </nav>
+      <nav class="header__dropdown header__dropdown_items">
+        <div class="header__dropdown-wrapper"><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-meat header__icon">
+                  <use xlink:href="#icon-meat"></use>
+                </svg>Мясо</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-eggs header__icon">
+                  <use xlink:href="#icon-eggs"></use>
+                </svg>Птица и яйцо</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-fish header__icon">
+                  <use xlink:href="#icon-fish"></use>
+                </svg>Рыба</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-milk header__icon">
+                  <use xlink:href="#icon-milk"></use>
+                </svg>Молочное</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-fruits header__icon">
+                  <use xlink:href="#icon-fruits"></use>
+                </svg>Овощи и фрукты</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-wild header__icon">
+                  <use xlink:href="#icon-wild"></use>
+                </svg>Дикоросы</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-bread header__icon">
+                  <use xlink:href="#icon-bread"></use>
+                </svg>Хлеб и выпечка</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-drinks header__icon">
+                  <use xlink:href="#icon-drinks"></use>
+                </svg>Напитки</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-handmade header__icon">
+                  <use xlink:href="#icon-handmade"></use>
+                </svg>Изделия</a><a href="#" class="header__dropdown-link"> 
+                <svg class="icon icon-all header__icon">
+                  <use xlink:href="#icon-all"></use>
+                </svg>Весь каталог</a></div>
+        <button type="button" class="header__close">Свернуть</button>
+      </nav>
+      <header class="header"></header>
+      <p class="edit-message">Это ваше объявление. Количество просмотров: <b>236</b>. <a href="#">Хотите отредактировать страницу</a> ?</p>
+      <section class="itemview">
+        <div class="itemview__wrapper">
+          <nav class="breadcrumbs"><a href="#" class="breadcrumbs__link">Ярмонка</a><a href="#" class="breadcrumbs__link">Молочные продукты</a><a href="#" class="breadcrumbs__link">Молоко</a><span class="breadcrumbs__current">Козье молоко</span></nav>
+          <h2 class="itemview__title">Козье молоко от «Петровской». Каждый день вкусное</h2>
+          <div class="sliders sliders_item">
+            <div class="sliders__slider sliders__slider_view">
+              <div class="sliders__photo sliders__photo_view"><img src="images/pic-1.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_view"><img src="images/pic-2.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_view"><img src="images/pic-3.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_view"><img src="images/pic-4.jpg" alt="Фото"/></div>
+            </div>
+            <div class="sliders__slider sliders__slider_preview">
+              <div class="sliders__photo sliders__photo_preview"><img src="images/pic-1.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_preview"><img src="images/pic-2.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_preview"><img src="images/pic-3.jpg" alt="Фото"/></div>
+              <div class="sliders__photo sliders__photo_preview"><img src="images/pic-4.jpg" alt="Фото"/></div>
+            </div>
+          </div>
+          <div class="itemview__brief">
+            <div class="itemview__prices">
+              <p class="itemview__price"><b>201 </b><span class="rub">₽</span>/кг</p>
+              <p class="itemview__discount"><b>190 </b><span class="rub">₽</span>/ от 50 литров</p>
+            </div>
+            <ul class="itemview__features">
+              <li class="itemview__feature itemview__feature_anytime">Самовывоз круглосуточно</li>
+              <li class="itemview__feature itemview__feature_delivery">Бесплатная доставка от 10 кг</li>
+              <li class="itemview__feature itemview__feature_cash">Оплата наличными</li>
+            </ul>
+            <menu class="itemview__actions">
+              <button type="button" class="itemview__bookmark">Добавить в закладки</button>
+            </menu>
+          </div>
+          <menu class="itemview__social">
+            <h3 class="itemview__sub-title">Поделиться:</h3>
+            <button class="itemview__social-button">
+                  <svg class="icon icon-vk itemview__social-icon">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+            </button>
+            <button class="itemview__social-button">
+                  <svg class="icon icon-fb itemview__social-icon">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+            </button>
+            <button class="itemview__social-button">
+                  <svg class="icon icon-ok itemview__social-icon">
+                    <use xlink:href="#icon-ok"></use>
+                  </svg>
+            </button>
+          </menu>
+          <div class="itemview__details">
+            <time datetime="2015-06-15" class="itemview__time">На сайте с 15 июля 2015</time>
+            <p class="itemview__abstract">Широко распространился миф, в соответствии с которым Джеймс Кук, прибыв в Австралию и увидев крупное, пере-двигающееся прыжками, незнакомое ему животное, обратился к одному из аборигенов с вопросом что это, однако тот, не понимая речи Кука, ответил ему на своём родном языке: «не понимаю»</p>
+            <dl class="facts">
+              <dt class="facts__fact-name"><b>Производитель</b></dt>
+              <dd class="facts__fact-value"><b> <a href="#">Усадьба «Петровская»</a></b></dd>
+              <dt class="facts__fact-name"><b>Время работы</b></dt>
+              <dd class="facts__fact-value"><b>С 6:00 до 24:00, пн—вск</b></dd>
+              <dt class="facts__fact-name"><b>Контактное лицо</b></dt>
+              <dd class="facts__fact-value"><b>102 труженика</b></dd>
+              <dt class="facts__fact-name"><b>Телефон</b></dt>
+              <dd class="facts__fact-value"><b><a href="+79111112233" class="facts__tel">+7 (911) 111 22 33</a></b></dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="steps__wrapper"><a href="#" class="steps__link">Написать в «Ярмонку»</a>
+          <h2 class="steps__title">Как купить на «Ярмонке»</h2>
+          <ol class="steps__list">
+            <li class="steps__step">
+              <p>Звоните производителю и договаривайтесь о дней количестве.</p>
+            </li>
+            <li class="steps__step">
+              <p>9 из 10 производителей доставят товар в город. Некоторые — бесплатно.</p>
+            </li>
+            <li class="steps__step">
+              <p>Если не знаете, что делать, или хотите оставить отзыв, скорее пишите нам!</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <div class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title contacts__title_short">Как добраться до производителя</h2>
+          <sections class="contacts__apps contacts__apps_short">
+            <h2 class="contacts__sub-title">Открыть карту в приложении:</h2>
+            <nav class="contacts__app-list contacts__app-list_short"><a href="#" class="contacts__app contacts__app_google">Google Maps</a><a href="#" class="contacts__app contacts__app_yandex">Google Яндекс. Карты</a><a href="#" class="contacts__app contacts__app_yandex-navigator">Яндекс. Навигатор</a></nav>
+          </sections>
+        </div>
+      </div>
+      <section class="stores">
+        <section data-url="js/store.json" class="stores__wrapper">
+          <div class="stores__map"></div>
+        </section>
+      </section>
+      <section class="purchases">
+        <header class="purchases__header">
+          <h2 class="purchases__title purchases__title_dull">Другие товары производителя</h2>
+          <p class="purchases__count">Всего 556 предложений</p>
+        </header>
+        <section class="purchases__list"><a href="#" class="item"><img src="images/item-1.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Свежайшая картошка, <br/> лучше чем в Беларуси!</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>250 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-2.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Молоко счастливой коровы. <br/> Каждый день вкусное</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>130 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-3.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Отличные томаты.<br/> Сорт «бычье сердце»</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>310 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-4.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Идеальный свежий творог.<br/> Жирность 7%</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>56 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-5.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Молоко счастливой коровы.<br/> Каждый день вкусное</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>45 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-6.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Молоко счастливой коровы.<br/> Каждый день вкусное</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>360 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-7.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Свежайшая картошка,<br/> лучше чем в Беларуси!</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>32 </b><span class="rub">₽</span> / кг</p></a><a href="#" class="item"><img src="images/item-8.png" alt="Фотография" class="item__photo"/>
+            <h3 class="item__title">Отличные томаты.<br/> Сорт «бычье сердце»</h3>
+            <time datetime="2015-06-15Z" class="item__date">15 июля 2015</time>
+            <p class="item__price"><b>210 </b><span class="rub">₽</span> / кг</p></a></section>
+      </section>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <nav class="footer__navigation"><a href="#" class="footer__link">Мясо</a><a href="#" class="footer__link">Птица и яйцо</a><a href="#" class="footer__link">Рыба</a><a href="#" class="footer__link">Молочное</a><a href="#" class="footer__link">Овощи и фрукты</a></nav>
+          <nav class="footer__navigation"><a href="#" class="footer__link">Дикоросы</a><a href="#" class="footer__link">Хлеб и выпечка</a><a href="#" class="footer__link">Напитки</a><a href="#" class="footer__link">Изделия</a><a href="#" class="footer__link">Весь каталог</a></nav>
+          <nav class="footer__navigation"><a href="#" class="footer__link">Производителю</a><a href="#" class="footer__link">Как купить</a><a href="#" class="footer__link">Как продать</a><a href="#" class="footer__link">О проекте</a></nav>
+          <div class="footer__conacts"><a href="mailto:hello@yarmonka.ru" class="footer__email">hello@yarmonka.ru</a><a href="tel:+78001112233" class="footer__tel">8 (800) 111 22 33</a></div>
+          <p class="footer__copyright">2015 © «Ярмонка»</p>
+          <p class="footer__developed-by">Разработка сайта — <a href="http://www.nimax.ru/" class="footer__developed-logotype">NIMAX</a></p>
+        </div>
+      </footer>
+      <div class="popup popup_alert">
+        <div class="popup__title">Поздравляем!</div>
+        <div class="popup__text">Спасибо, что поделились мнением. <br/>Мы разберёмся с обозначенной проблемой. <br/>Телефон поддержки: <a href="tel:+7800800800" class="tel">8 (800) 800 800</a></div>
+        <menu class="popup__menu">
+          <button type="button" class="popup__close">Закрыть</button>
+          <button type="button" class="popup__close popup__close_cross"></button>
+        </menu>
+      </div>
+      <div class="popup popup_recovery">
+        <div class="popup__title">Забыли пароль?</div>
+        <div class="popup__text">Для восстановления пароля введите адрес почты, указанный при регистрации. На него будет выслана инструкция.</div>
+        <form action="/user/recovery" method="post" class="form form_recovery">
+          <fieldset class="form__field">
+            <input type="email" name="email" placeholder="boba@mail.ru" required="required" class="form__input form__input_wider"/>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_wider">Восстановить пароль</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+      <div class="popup popup_feedback">
+        <div class="popup__title">Напишите нам!</div>
+        <div class="popup__text">Пока мы тестируем сервис для покупателей, просим рассказать о впечатлениях. Если вам понятно не всё, видно не до конца или совсем неудобно обращаться с функциями, пожалуйста, напишите — это будет большим вкладом.</div>
+        <form action="/user/feedback" method="post" class="form form_feedback">
+          <fieldset class="form__field">
+            <textarea name="message" placeholder="Мне не понятно, а где все уточки?" required="required" cols="20" rows="80" class="form__input form__textarea form__textarea_wide"></textarea>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_wider">Отправить</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+      <div class="popup popup_ask">
+        <div class="popup__title">Cпроси меня как!</div>
+        <div class="popup__text">Мы обожаем, когда вы задаете сложные, неожиданные вопросы, которые поставили бы в тупик Канта и Фейербаха. Ну, давайте же, сделайте это.</div>
+        <form action="/user/ask" method="post" class="form form_ask">
+          <fieldset class="form__field">
+            <textarea name="message" placeholder="Мне не понятно, а где все уточки?" required="required" cols="20" rows="80" class="form__input form__textarea form__textarea_wide"></textarea>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_wider">Спросить</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+      <div class="popup popup_register">
+        <div class="popup__title">Регистрация</div>
+        <form action="/user/register" method="post" class="form form_register">
+          <fieldset class="form__field">
+            <label for="form-register__name" class="sell-auth__label">Имя</label>
+            <input id="form-register__name" type="text" name="name" placeholder="Иван Мухоморов" required="required" class="form__input form__input_wider"/>
+          </fieldset>
+          <fieldset class="form__field">
+            <label for="form-register__email" class="sell-auth__label">Электронная почта</label>
+            <input id="form-register__email" type="email" name="email" placeholder="boba@mail.ru" required="required" class="form__input form__input_wider"/>
+          </fieldset>
+          <fieldset class="form__field">
+            <label for="form-register__password" class="sell-auth__label">Пароль</label>
+            <input id="form-register__password" type="password" name="password" placeholder="" required="required" class="form__input form__input_wider"/>
+          </fieldset>
+          <fieldset class="form__field">
+            <label for="form-register__password-confirmation" class="sell-auth__label">Повторите пароль</label>
+            <input id="form-register__password-confirmation" type="password" name="password_confirmation" placeholder="" required="required" class="form__input form__input_wider"/>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_wider">Зарегистрироваться</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+      <div class="popup popup_confirm">
+        <div class="popup__title">Подтверждение</div>
+        <div class="popup__text">Вы действительно хотите удалить из закладок <a href="#">«Свинина деревенская копченая»?</a></div>
+        <menu class="popup__menu">
+          <button type="button" class="popup__accept">Удалить</button>
+          <button type="button" class="popup__reject">Отменить</button>
+          <button type="button" class="popup__close popup__close_cross"></button>
+        </menu>
+      </div>
+      <div class="popup-lightbox"></div>
+      <div class="popup popup_like">
+        <div class="popup__title">Похвалить производителя?</div>
+        <form action="/user/like" method="post" class="form form_like">
+          <fieldset class="form__field">
+            <label for="form-like__comment" class="form__label">Отзыв:</label>
+            <textarea id="form-like__comment" type="text" name="comment" placeholder="Вас не люблю за статный вид, за гордый взор, за вольный нрав" required="required" class="form__textarea form__textarea_wide"></textarea>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_send">Отправить</button>
+            <button type="button" class="form__link form__button_like">Похвалить без отзыва</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+      <div class="popup popup_dislike">
+        <div class="popup__title">Пожаловаться на производителя?</div>
+        <form action="/user/dislike" method="post" class="form form_dislike">
+          <fieldset class="form__field">
+            <label for="form-like__comment" class="form__label">Отзыв:</label>
+            <textarea id="form-like__comment" type="text" name="comment" placeholder="Я вас люблю за статный вид, за гордый взор, за вольный нрав" required="required" class="form__textarea form__textarea_wide"></textarea>
+          </fieldset>
+          <menu class="form__menu">
+            <button type="submit" class="form__button form__button_send">Отправить</button>
+          </menu>
+        </form>
+        <button type="button" class="popup__close popup__close_cross"></button>
+      </div>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js"></script>
+    <script src="js/promise-polyfill/Promise.min.js"></script>
+    <script src="js/es5-shim/es5-shim.min.js"></script>
+    <script src="js/es5-shim/es5-sham.min.js"></script>
+    <script src="js/classList.js/classList.min.js"></script>
+    <script src="js/Element.closest/closest.legacy.js"></script>
+    <script src="js/velocity/velocity.min.js"></script>
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <script src="js/plupload/js/plupload.full.min.js"></script>
+    <script src="js/isotope/dist/isotope.pkgd.min.js"></script>
+    <script src="js/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <script src="js/infobox.js"></script>
+    <script src="js/slick-carousel/slick/slick.min.js"></script>
+    <script src="js/select2/dist/js/select2.min.js"></script>
+    <script src="js/select2/dist/js/i18n/ru.js"></script>
+    <script src="js/scripts.js" async="async" defer="defer"></script>
+  </body>
+</html>
